@@ -2,7 +2,7 @@
 title: "[日本語] 敬語体系"
 date: 2017-08-30T01:53:34+08:00
 lastmod: 2017-08-30T01:53:34+08:00
-draft: false
+draft: true
 keywords: []
 description: ""
 tags: ["preview", "日本語", "tag-4"]

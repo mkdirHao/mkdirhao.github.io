@@ -2,7 +2,7 @@
 title: "Theme preview"
 date: 2018-07-10T00:00:00+08:00
 lastmod: 2018-07-10T00:00:00+08:00
-draft: false
+draft: true
 tags: ["preview", "Theme preview", "tag-3"]
 categories: ["Theme preview", "category-2", "category-3"]
 
@@ -390,7 +390,7 @@ Dictionary
 :   item 1
 
     item 2
-
+    
     item 3
 
 ## Blocks

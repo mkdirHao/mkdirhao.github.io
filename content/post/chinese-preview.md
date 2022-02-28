@@ -2,7 +2,7 @@
 title: "[中文] 《长恨歌》"
 date: 2017-08-30T01:37:56+08:00
 lastmod: 2017-08-30T01:37:56+08:00
-draft: false
+draft: true
 tags: ["preview", "中文", "tag-1"]
 categories: ["中文"]
 author: "Wikipedia"
@@ -84,3 +84,4 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 天长地久有时尽，此恨绵绵无绝期。
 
 ![image-20220228153938833](img/image-20220228153938833.png)
+
