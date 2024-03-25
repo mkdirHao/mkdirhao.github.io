@@ -1,7 +1,7 @@
 ---
 title: "用goreman快速启动三节点etcd"
 date: 2022-03-02T17:33:56+08:00
-draft: false
+draft: true
 tags: ["daily", "tools"]
 categories: ["daily"]
 ---

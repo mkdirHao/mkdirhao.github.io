@@ -1,13 +1,13 @@
 ---
 title: "东北小城见闻-阜新初体验"
 date: 2023-08-18T22:23:45+08:00
-draft: false
+draft: true
 tags: ["daily"]
 categories: ["daily"]
 ---
 
 
-![1711366527120](image/index/1711366527120.png)
+
 # **阜新初体验**
 
 因为被裁员,再加上想躺平,就来到东北的小城阜新.
