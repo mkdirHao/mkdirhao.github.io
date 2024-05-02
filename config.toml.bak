@@ -1,7 +1,7 @@
 baseURL = "https://clever-jang-455a4a.netlify.app/"
 languageCode = "en"
 defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
-title = "mdkirHao - focus on Cloud Native"
+title = "mkdirHao - focus on Cloud Native"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableEmoji = true
