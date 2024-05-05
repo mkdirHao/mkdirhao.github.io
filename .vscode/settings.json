@@ -1,0 +1,10 @@
+{
+    "frontMatter.content.pageFolders": [
+        {
+            "title": "post",
+            "path": "[[workspace]]/content/post"
+        }
+    ],
+    "[markdown]": {
+    }
+}
