@@ -2,8 +2,8 @@
 title: "It's me!"
 date: 2022-02-26T21:38:52+08:00
 
-menu: "main"
-weight: 50
+#menu: "main"
+#weight: 50
 
 ---
 
@@ -15,8 +15,5 @@ less is more
 
 一个爱骑单车的少年
 
-:mailbox: mail:mkdirHao@qq.com
-
-:speech_balloon:wechat:mkdirHao
 
 
