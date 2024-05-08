@@ -124,7 +124,7 @@ copyright = "This work is licensed under CC BY-NC-SA-4.0."
       # URL of the LOGO
       logo = "/icon.svg"
       # title name
-      name = "mkdiHao"
+      name = "mkdirHao"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
