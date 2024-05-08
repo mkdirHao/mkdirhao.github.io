@@ -228,7 +228,7 @@ enableEmoji = true
 
 [Permalinks]
   # posts = ":year/:month/:filename"
-  posts = "posts/:slugorfilename"
+  #posts = "posts/:slugorfilename"
 
 # -------------------------------------------------------------------------------------
 # Privacy Configuration
