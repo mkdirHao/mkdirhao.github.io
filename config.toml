@@ -1055,7 +1055,7 @@ enableEmoji = true
       [params.page.comment.disqus]
         enable = true
         # Disqus shortname to use Disqus in posts
-        shortname = "mkdirHao"
+        shortname = "mkdirhao"
       # Gitalk comment config (https://github.com/gitalk/gitalk)
       [params.page.comment.gitalk]
         enable = false
