@@ -40,7 +40,7 @@ avatar = "/icon.svg"
 
 [menu]
   [[menu.main]]             # config your menu              # 配置目录
-  name = "Home"
+  name = "主页"
   weight = 1
   url = "/"
   [menu.main.params]
@@ -52,7 +52,7 @@ avatar = "/icon.svg"
     pre = ""
     # you can add extra information after the name (HTML format is supported), such as icons
     post = ""
-    name = "Archives"
+    name = "归档"
     url = "/posts/"
     # title will be shown when you hover on this menu link
     title = ""
@@ -72,7 +72,7 @@ avatar = "/icon.svg"
     parent = "archives"
     pre = ""
     post = ""
-    name = "Categories"
+    name = "分类"
     url = "/categories/"
     title = ""
     weight = 3
@@ -83,10 +83,10 @@ avatar = "/icon.svg"
     parent = "archives"
     pre = ""
     post = ""
-    name = "All article"
+    name = "所有文章"
     url = "/posts/"
     title = ""
-    weight = 3
+    weight = 2
     [menu.main.params]
       icon = "fa-solid fa-archive"
   [[menu.main]]
@@ -94,7 +94,7 @@ avatar = "/icon.svg"
     parent = "archives"
     pre = ""
     post = ""
-    name = "Tags"
+    name = "标签"
     url = "/tags/"
     title = ""
     weight = 5
@@ -105,7 +105,7 @@ avatar = "/icon.svg"
     parent = "archives"
     pre = ""
     post = ""
-    name = "Collections"
+    name = "合集"
     url = "/collections/"
     title = ""
     weight = 4
@@ -116,7 +116,7 @@ avatar = "/icon.svg"
     parent = ""
     pre = ""
     post = ""
-    name = "It's me"
+    name = "是我"
     url = "/about/"
     title = ""
     weight = 100

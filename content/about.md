@@ -1,5 +1,5 @@
 ---
-title: "It's me!"
+title: "是我!"
 date: 2022-02-26T21:38:52+08:00
 
 #menu: "main"
@@ -8,8 +8,8 @@ date: 2022-02-26T21:38:52+08:00
 ---
 # {{< typeit loop=true >}}来点 music 马上就到 loding~{{< /typeit >}}
 {{< mmt-netease mid="7693644695" autoplay="false" >}}
-# about me
-{{< admonition type=info title="this me" open=true >}}
+# 关于我
+{{< admonition type=info title="这是我" open=true >}}
 {{< typeit group=about >}}
 极简主义信仰者
 
@@ -17,7 +17,7 @@ date: 2022-02-26T21:38:52+08:00
 {{< /typeit >}}
 {{< /admonition >}}
 
-{{< admonition type=info title="personal creed" open=true >}}
+{{< admonition type=info title="个人信条" open=true >}}
 {{< typeit group=about >}}
 世事无常 开心就好
 
@@ -29,7 +29,7 @@ just for fun
 {{< /typeit >}}
 {{< /admonition >}}
 
-# contact
+# 联系我
  {{< link "https://github.com/mkdirHao" "github" "this a nice man" true true >}}
 
  
