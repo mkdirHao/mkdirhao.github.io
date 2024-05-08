@@ -77,6 +77,16 @@ jobs:
           # It specifies the temporary branch which hosts the static website.
           # Each build will OVERWRITE this branch.
           target-branch: gh-pages
+      - name: Create and commit .nojekyll file
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          git reset --hard origin/gh-pages
+          touch .nojekyll
+          git add .nojekyll
+          git commit -m "Create .nojekyll  file"
+          git push --set-upstream origin gh-pages
+     
 
 
   # Deployment job
