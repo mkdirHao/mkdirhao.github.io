@@ -560,7 +560,7 @@ enableEmoji = true
       # whether to show social links
       social = true
       # disclaimer (HTML format is supported)
-      disclaimer = "内容均为本人瞎逼逼<br>若有不同意见, 那么你是对的。"
+      disclaimer = "若有不同意见,你是对的👍"
     # Home page posts
     [params.home.posts]
       enable = true
