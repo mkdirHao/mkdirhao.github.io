@@ -6,8 +6,11 @@ date: 2022-02-26T21:38:52+08:00
 #weight: 50
 
 ---
+
 # {{< typeit loop=true >}}listen music loding~{{< /typeit >}}
-{{< mmt-netease mid="7693644695" autoplay="false" >}}
+<!-- {{< mmt-netease mid="7693644695" autoplay="false" >}} -->
+{{< music url="/music/ForeverYoung.mp3" theme="#2b1216" name="Forever Young" artist="Bob Dylan" cover="/images/heijiao.png" >}}
+
 # about me
 {{< admonition type=info title="this me" open=true >}}
 {{< typeit group=about >}}
@@ -24,6 +27,9 @@ less is more <br>
 just for fun
 {{< /typeit >}}
 {{< /admonition >}}
+
+# vlog about cycling in korea
+{{< youtube bfIENK-utmc >}}
 
 # {{< typeit loop=true >}}welcome contact👋  {{< /typeit >}}
  {{< link "https://github.com/mkdirHao" "github" "this a nice man" true true >}}
