@@ -22,9 +22,9 @@ date: 2022-02-26T21:38:52+08:00
 
 {{< admonition type=info title="個人信条" open=true >}}
 {{< typeit group=about >}}
-人生は無常だ、ただ幸せに生きよう.<br>
-人生は美しい。<br>
-「少なければ十分」 <br>
+人生は無常だ、ただ幸せに生きよう<br>
+人生は美しい<br>
+少なければ十分<br>
 ただの楽しみのため
 {{< /typeit >}}
 {{< /admonition >}}
