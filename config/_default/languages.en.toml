@@ -165,3 +165,20 @@ copyright = "This work is licensed under CC BY-NC-SA-4.0."
       enable = true
       # special amount of posts in each home posts page
       paginate = 6
+  [params.page.reward]
+      enable = true
+      animation = true
+      # position relative to post footer, optional values: ["before", "after"]
+      position = "before"
+      
+      comment = "Buy me a coffee "
+      # comment = "Buy me a coffee"
+      # FixIt 0.2.18 | NEW display mode of QR code images, optional values: ["static", "fixed"], default: `static`
+      mode = "fixed"
+      [params.page.reward.ways]
+       wechatpay = "/images/wechat.jpg"
+       alipay = "/images/alipay.jpg"
+        # wechatpay = "/images/wechatpay.png"
+        # alipay = "/images/alipay.png"
+        paypal = "/images/paypal.png"
+        # bitcoin = "/images/bitcoin.png"

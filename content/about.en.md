@@ -16,7 +16,7 @@ date: 2022-02-26T21:38:52+08:00
 {{< admonition type=info title="this me" open=true >}}
 {{< typeit group=about >}}
 minimalist believer<br>
-a teenage boy who loves cycling.
+a man who enjoys cycling like wind
 {{< /typeit >}}
 {{< /admonition >}}
 
@@ -38,7 +38,7 @@ just for fun
  
 {{< link "mailto:mkdirhao@qq.com" "mail" "mail to me" true false >}}
 
-{{< reward wechatpay="/images/wechat.jpg" alipay="/images/alipay.jpg" comment="buy me a coffee～" mode="fixed" >}}
+{{< reward wechatpay="/images/wechat.jpg" alipay="/images/alipay.jpg" paypal="/images/paypal.png" comment="Buy me a coffee～" mode="fixed" >}}
 
 
 

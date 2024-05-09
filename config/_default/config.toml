@@ -984,7 +984,7 @@ enableEmoji = true
       count = 5
     # FixIt 0.2.17 | NEW Donate (Sponsor) settings
     [params.page.reward]
-      enable = true
+      enable = false
       animation = true
       # position relative to post footer, optional values: ["before", "after"]
       position = "before"
@@ -994,8 +994,8 @@ enableEmoji = true
       # FixIt 0.2.18 | NEW display mode of QR code images, optional values: ["static", "fixed"], default: `static`
       mode = "fixed"
       [params.page.reward.ways]
-       wechatpay = "/images/wechat.jpg"
-        alipay = "/images/alipay.jpg"
+        #wechatpay = "/images/wechat.jpg"
+        #alipay = "/images/alipay.jpg"
         # wechatpay = "/images/wechatpay.png"
         # alipay = "/images/alipay.png"
         # paypal = "/images/paypal.png"
