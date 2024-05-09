@@ -10,6 +10,7 @@ date: 2022-02-26T21:38:52+08:00
 # {{< typeit loop=true >}}listen music loding~{{< /typeit >}}
 <!-- {{< mmt-netease mid="7693644695" autoplay="false" >}} -->
 {{< music url="/music/ForeverYoung.mp3" theme="#2b1216" name="Forever Young" artist="Bob Dylan" cover="/images/heijiao.png" >}}
+{{< music url="/music/tiankongzhicheng.mp3" theme="#2b1216" name=天空之城 artist=李志 cover="/images/heijiao.png" >}}
 
 # about me
 {{< admonition type=info title="this me" open=true >}}
