@@ -8,9 +8,10 @@ date: 2022-02-26T21:38:52+08:00
 ---
 
 # {{< typeit loop=true >}}listen music loding~{{< /typeit >}}
-<!-- {{< mmt-netease mid="7693644695" autoplay="false" >}} -->
-{{< music url="/music/ForeverYoung.mp3" theme="#2b1216" name="Forever Young" artist="Bob Dylan" cover="/images/heijiao.png" >}}
-{{< music url="/music/tiankongzhicheng.mp3" theme="#2b1216" name=天空之城 artist=李志 cover="/images/heijiao.png" >}}
+<!-- take me to your heart -->
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7rdtBpPpe4knfd7aD98h9X?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<!-- 天空之城 李志 -->
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0sr9wJ9gQTla0XPQjyuDuw?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 # about me
 {{< admonition type=info title="this me" open=true >}}

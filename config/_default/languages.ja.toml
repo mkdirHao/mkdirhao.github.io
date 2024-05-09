@@ -157,7 +157,7 @@ avatar = "/icon.svg"
       # title shown in home page (HTML format is supported)
       title = "ハオカキ"
       # subtitle shown in home page
-      subtitle = "心に余計なことを抱かずにいれば、それが人間の良い季節です。"
+      subtitle = "春は百花有りて秋は月有り\n夏は涼風有りて冬は雪有り\n若し心頭に掛く閒事無かれば\n便ち是れ人間の好ひ時節なり"
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
