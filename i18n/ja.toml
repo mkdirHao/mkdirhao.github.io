@@ -12,38 +12,38 @@ quicklyUpgrade = "素早くアップグレードするには、コマンドを�
 
 # === baseof ===
 [baseof]
-backToTop = "Back to Top"
-viewComments = "View Comments"
-noscript = "Theme FixIt works best with JavaScript enabled."
+backToTop = "ページのトップに戻る"
+viewComments = "コメントを表示"
+noscript = "テーマ FixIt は、JavaScript が有効になっていると最適に機能します。"
 # === baseof ===
 
 # === Taxonomy ===
 [archives]
-other = "Archives"
+other = "アーカイブズ"
 
 [allSome]
-other = "All {{ .Some }}"
+other = "すべて {{ .Some }}"
 
 [category]
-other = "Category"
+other = "分類"
 
 [categories]
-other = "Categories"
+other = "分類"
 
 [collection]
-other = "Collection"
+other = "コレクション"
 
 [collections]
-other = "Collections"
+other = "コレクション"
 
 [tag]
-other = "Tag"
+other = "タグ"
 
 [tags]
-other = "Tags"
+other = "タグ"
 
 [posts]
-other = "Posts"
+other = "ポスト"
 
 # === Taxonomy ===
 
@@ -174,18 +174,18 @@ other = "インターネットに接続されていません。キャッシュ�
 
 # === shortcodes/admonition.html ===
 [admonition]
-note = "Note"
-abstract = "Abstract"
-info = "Info"
-tip = "Tip"
-success = "Success"
-question = "Question"
-warning = "Warning"
-failure = "Failure"
-danger = "Danger"
-bug = "Bug"
-example = "Example"
-quote = "Quote"
+note = "ノート"
+abstract = "抽象"
+info = "情報"
+tip = "メモ"
+success = "成功"
+question = "質問"
+warning = "警告"
+failure = "失敗"
+danger = "危険"
+bug = "バグ"
+example = "例"
+quote = "引用"
 # === shortcodes/admonition.html ===
 
 # === shortcodes/version.html ===
