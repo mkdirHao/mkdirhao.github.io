@@ -11,25 +11,21 @@ date: 2022-02-26T21:38:52+08:00
 # about me
 {{< admonition type=info title="this me" open=true >}}
 {{< typeit group=about >}}
-minimalist believer
-
+minimalist believer<br>
 a teenage boy who loves cycling.
 {{< /typeit >}}
 {{< /admonition >}}
 
 {{< admonition type=info title="personal creed" open=true >}}
 {{< typeit group=about >}}
-life is impermanent, just be happy.
-
-life is beautiful.
-
-less is more 
-
+life is impermanent, just be happy.<br>
+life is beautiful.<br>
+less is more <br>
 just for fun
 {{< /typeit >}}
 {{< /admonition >}}
 
-# contact
+# {{< typeit loop=true >}}welcome contact👋  {{< /typeit >}}
  {{< link "https://github.com/mkdirHao" "github" "this a nice man" true true >}}
 
  
