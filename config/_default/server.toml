@@ -3,6 +3,10 @@
   status = 404
   to = '/en/404.html'
 [[redirects]]
+  from = '/ja/**'
+  status = 404
+  to = '/ja/404.html'
+[[redirects]]
   from = '/**'
   status = 404
   to = '/404.html'

@@ -1,0 +1,196 @@
+# Translations for English
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === init ===
+[init]
+configurationError = "互換性エラー\nまだ「FixIt」のバージョンパラメータを正しく設定していません。 読む https://fixit.lruihao.cn/documentation/basics/#theme-configuration"
+compatibilityError = "互換性エラー ({{ .From }} -> {{ .To }}):\nあなたには互換性のないアップデートがあります。 読む https://github.com/hugo-fixit/FixIt/releases"
+RCVersionWarn = "あなたはFixItの開発バージョンを使用しています。安定版を使用することを検討してください。\n読む https://github.com/hugo-fixit/FixIt/releases"
+devEnvWarn = "現在の環境は「開発」です。「コメントシステム」、「CDN」そして「フィンガープリント」は無効化されます。"
+quicklyUpgrade = "素早くアップグレードするには、コマンドを使用してください。: "
+# === init ===
+
+# === baseof ===
+[baseof]
+backToTop = "Back to Top"
+viewComments = "View Comments"
+noscript = "Theme FixIt works best with JavaScript enabled."
+# === baseof ===
+
+# === Taxonomy ===
+[archives]
+other = "Archives"
+
+[allSome]
+other = "All {{ .Some }}"
+
+[category]
+other = "Category"
+
+[categories]
+other = "Categories"
+
+[collection]
+other = "Collection"
+
+[collections]
+other = "Collections"
+
+[tag]
+other = "Tag"
+
+[tags]
+other = "Tags"
+
+[posts]
+other = "Posts"
+
+# === Taxonomy ===
+
+# === Section ===
+[section]
+recentlyUpdated = "最近更新"
+
+[section.totalWordCount]
+one = "合計一単語"
+other = "合計 {{ .Count }} 単語"
+
+[section.archiveCounter]
+one = "唯一の記事"
+other = "合計　{{ .Count }} 記事"
+# === Section ===
+
+# === Pagination ===
+[pagination]
+more = "もっと"
+# === Pagination ===
+
+# === partials/header.html ===
+[header]
+selectLanguage = "言語の選択"
+noMoretTranslations = "翻訳をもういらない"
+switchTheme = "テーマを切り替え"
+# === partials/header.html ===
+
+# === partials/footer.html ===
+[footer]
+poweredBySome = "{{ .Hugo }}強力な支援を提供します | テーマ - {{ .Theme }}"
+siteUV = "合計訪問者"
+sitePV = "合計訪問数"
+siteRunning = "ウェブサイトが稼働中 ..."
+# === partials/footer.html ===
+
+# === partials/comment.html ===
+[comment]
+valineLang = "ja"
+valinePlaceholder = "コメント ..."
+facebookLanguageCode = "ja"
+# === partials/comment.html ===
+
+# === partials/assets.html ===
+[assets]
+search = "検索"
+searchPlaceholder = "タイトルや内容を検索 ..."
+clear = "クリア"
+cancel = "取消する"
+noResultsFound = "結果が見つかりませんでした"
+copyToClipboard = "クリップボードにコピー"
+editLockTitle = "編集可能なコードブロックをロック"
+editUnLockTitle = "編集可能なコードブロックをアンロック"
+cookieconsentMessage = "このウェブサイトは、あなたの体験を向上させるためにクッキーを使用しています。"
+cookieconsentDismiss = "了解しました!"
+cookieconsentLink = "もっと知る"
+# === partials/assets.html ===
+
+# === partials/plugin/share.html ===
+[shareOn]
+other = "シェアする"
+# === partials/plugin/share.html ===
+
+# === posts/single.html ===
+[single]
+contents = "内容"
+pin = "ピンを一番上に固定"
+repost = "再投稿"
+publishedOnDate = "{{ .Date }}公開されました"
+views = "閲覧数"
+comments = "コメント"
+author = "著者"
+updatedOnDate = "更新日時 {{ .Date }}"
+readMarkdown = "Markdownを読む"
+viewSource = "ソースコードを見る"
+editThisPage = "このページを編集する"
+reportIssue = "問題を報告する"
+back = "後ろに戻って"
+home = "ホーム"
+readMore = "続きを読む"
+expirationReminder = "この記事{{ .Date }}は最終更新されました, 内容は古くなっている可能性があります。"
+encryptedAbstract = "この記事は暗号化されており、そのため生の内容は見えません。"
+encryptedMessage = "パスワードを入力してください"
+password = "認証"
+enterBtn = "エンター"
+encryptyAgain = "再暗号化してください。"
+relatedContent = "関連コンテンツ"
+
+[single.includedIn]
+categories = " {{ .Categories }}含まれています"
+collections = " {{ .Collections }}含まれています"
+both = " {{ .Categories }} や {{ .Collections }}含まれています"
+
+[single.wordCount]
+one = "一つの単語"
+other = "{{ .Count }} 単語"
+
+[single.fuzzyWordCount]
+other = "大約 {{ .Count }} 単語"
+
+[single.readingTime]
+one = "一分"
+other = "{{ .Count }} 分"
+
+[single.reward]
+donate = "寄付"
+wechatpay = "WeChat Pay"
+alipay = "Alipay"
+paypal = "PayPal"
+bitcoin = "Bitcoin"
+# === posts/single.html ===
+
+# === 404.html ===
+[pageNotFound]
+other = "ページが見つかりません"
+
+[pageNotFoundText]
+other = "あなたが探しているページは存在しません。申し訳ありません。"
+# === 404.html ===
+
+# === offline ===
+[offlineTitle]
+other = "オフライン"
+
+[offlineText]
+other = "インターネットに接続されていません。キャッシュされたページのみ利用可能です。"
+# === offline ===
+
+# === shortcodes/admonition.html ===
+[admonition]
+note = "Note"
+abstract = "Abstract"
+info = "Info"
+tip = "Tip"
+success = "Success"
+question = "Question"
+warning = "Warning"
+failure = "Failure"
+danger = "Danger"
+bug = "Bug"
+example = "Example"
+quote = "Quote"
+# === shortcodes/admonition.html ===
+
+# === shortcodes/version.html ===
+[version]
+new = "新しい "
+changed = "変化した"
+deleted = "削除しました"
+# === shortcodes/version.html ===
