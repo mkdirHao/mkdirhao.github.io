@@ -22,7 +22,11 @@ hasCJKLanguage = true
 # 版权描述，仅用于 SEO
 copyright = "This work is licensed under CC BY-NC-SA-4.0."
 
-
+[params.author]
+name = "ハオさん"
+email = "mkdirhao@qq.com"
+link = ""
+avatar = "/icon.svg"
 # -------------------------------------------------------------------------------------
 # Menu Configuration
 # See: https://fixit.lruihao.cn/documentation/basics/#menu-configuration
