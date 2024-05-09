@@ -182,3 +182,5 @@ copyright = "This work is licensed under CC BY-NC-SA-4.0."
         # alipay = "/images/alipay.png"
         paypal = "/images/paypal.png"
         # bitcoin = "/images/bitcoin.png"
+  [params.social]
+    Paypal = "mkdirhao"
