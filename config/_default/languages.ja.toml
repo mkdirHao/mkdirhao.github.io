@@ -23,7 +23,7 @@ hasCJKLanguage = true
 copyright = "This work is licensed under CC BY-NC-SA-4.0."
 
 [params.author]
-name = "ハオさん"
+name = "郝さん"
 email = "mkdirhao@qq.com"
 link = ""
 avatar = "/icon.svg"
@@ -128,7 +128,7 @@ avatar = "/icon.svg"
       # URL of the LOGO
       logo = "/icon.svg"
       # title name
-      name = "ハオカキ"
+      name = "高位の無限郝"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
@@ -155,7 +155,7 @@ avatar = "/icon.svg"
       # FixIt 0.2.17 | NEW identifier of avatar menu link
       avatarMenu = ""
       # title shown in home page (HTML format is supported)
-      title = "ハオカキ"
+      title = "高位の無限郝"
       # subtitle shown in home page
       subtitle = "春は百花が咲き、秋には月が美しく\n夏には爽やかな風が吹き、冬には雪が降る\n若し心頭に掛く閒事無かれば\n便ち是れ人間の好ひ時節なり"
       # whether to use typeit animation for subtitle
