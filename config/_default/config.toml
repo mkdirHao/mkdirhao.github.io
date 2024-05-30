@@ -15,7 +15,7 @@ title = "mkdirHao'blog"
 # Hostname (and path) to the root
 baseURL = "https://mkdirhao.tech/"
 # theme list
-theme = ["FixIt", "shortcode-mmt-netease"]
+theme = ["fixit", "shortcode-mmt-netease"]
 # theme = ["FixIt"] # enable in your site config file
 # determines default content language ["en", "zh-cn", "fr", "pl", ...]
 defaultContentLanguage = "zh-cn"
