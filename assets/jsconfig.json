@@ -3,7 +3,7 @@
   "baseUrl": ".",
   "paths": {
    "*": [
-    "../themes/fixit/assets/*"
+    "../themes/FixIt/assets/*"
    ]
   }
  }
