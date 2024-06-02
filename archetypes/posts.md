@@ -9,10 +9,9 @@ keywords:
 license:
 comment: true
 weight: 0
-tags:
-  - draft
-categories:
-  - draft
+tags: ["科技周报","科技"]
+categories: ["科技周报","科技"]
+collections: ["科技周报"]
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
