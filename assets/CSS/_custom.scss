@@ -1,0 +1,13 @@
+// ==============================
+// Custom style
+// 自定义样式
+// ==============================
+
+/*首行缩进两个字符 */
+.content p {
+    text-indent: 2rem;
+}
+
+.content ul, ol, dl {
+    margin-left: 2rem;
+}

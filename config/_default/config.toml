@@ -719,7 +719,7 @@ enableEmoji = true
     fontFamily = "inherit"
 
   # FixIt 0.2.12 | NEW Busuanzi count
-  [params.ibruce]
+  [params.busuanzi]
     enable = true
     # Enable in post meta
     enablePost = true
