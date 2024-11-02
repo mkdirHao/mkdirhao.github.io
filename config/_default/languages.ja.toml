@@ -23,7 +23,7 @@ hasCJKLanguage = true
 copyright = "This work is licensed under CC BY-NC-SA-4.0."
 
 [params.author]
-name = "郝さん"
+name = "Hao"
 email = "mkdirhao@qq.com"
 link = ""
 avatar = "/icon.svg"
