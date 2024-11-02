@@ -1,14 +1,14 @@
 {{- /* Collection List */ -}}
 {{- $params := partial "function/params.html" -}}
 
-{{- if .Params.collections | and $params.collectionList | and (not $params.password) -}}
+{{- if .Params.collections | and $params.collectionList -}}
   {{- $collectionTerms := .GetTerms "collections" -}}
   {{- range $collectionTerms -}}
     {{- $pages := (where .Pages "Params.Weight" "!=" nil) | append (where .Pages "Params.Weight" "eq" nil).ByDate -}}
     {{- $open := eq (index $collectionTerms 0) . -}}
     {{- $currentKey := 0 -}}
 
-    <div class="details collection-details{{ if $open }} open{{ end }}">
+    <div class="details collection-details{{ with $params.password }} encrypted-hidden{{ end }}{{ if $open }} open{{ end }}">
       <div class="details-summary collection-summary">
         {{ dict "Class" "fa-solid fa-layer-group fa-fw" | partial "plugin/icon.html" }}
         <span class="collection-name" data-collections="{{ T "collections" }}">{{ .LinkTitle }}</span>
@@ -18,19 +18,23 @@
       <div class="details-content collection-content">
         <nav>
           <ul class="collection-list">
-            {{- range $key, $value := $pages -}}
-              {{- $title := title $value.LinkTitle -}}
-              {{- if $value.LinkTitle | eq $.LinkTitle -}}
-                {{- $currentKey = $key -}}
-                <li class="collection-item"><span class="active" title="{{ $title }}">{{ $title }}</span></li>
-              {{- else }}
-                <li class="collection-item"><a href="{{ $value.RelPermalink }}" title="{{ $title }}">{{ $title }}</a></li>
-              {{- end }}
+            {{- range $key, $page := $pages -}}
+              {{- $capitalizeTitles := $page.Param "capitalizeTitles" -}}
+              {{- $title := cond $capitalizeTitles (title $page.LinkTitle) $page.LinkTitle -}}
+              <li class="collection-item">
+                {{- if $.Eq $page -}}
+                  {{- $currentKey = $key -}}
+                  <span class="active" title="{{ $title }}">{{ $title }}</span>
+                {{- else -}}
+                  <a href="{{ $page.RelPermalink }}" title="{{ $title }}">{{ $title }}</a>
+                {{- end -}}
+              </li>
             {{- end -}}
           </ul>
           <div class="collection-nav-simple">
             {{- with $pages.Next $ -}}
-              <a href="{{ .RelPermalink }}" class="collection-nav-item" rel="prev" title="{{ title .LinkTitle }}">
+              {{- $capitalizeTitles := .Param "capitalizeTitles" -}}
+              <a href="{{ .RelPermalink }}" class="collection-nav-item" rel="prev" title="{{ cond $capitalizeTitles (title .LinkTitle) .LinkTitle }}">
                 {{- dict "Class" "fa-solid fa-angle-left fa-fw" | partial "plugin/icon.html" -}}
               </a>
             {{- else -}}
@@ -38,7 +42,8 @@
             {{- end -}}
             <span class="text-secondary">{{ add $currentKey 1 }}/{{ $pages.Len }}</span>
             {{- with $pages.Prev $ -}}
-              <a href="{{ .RelPermalink }}" class="collection-nav-item" rel="next" title="{{ title .LinkTitle }}">
+              {{- $capitalizeTitles := .Param "capitalizeTitles" -}}
+              <a href="{{ .RelPermalink }}" class="collection-nav-item" rel="next" title="{{ cond $capitalizeTitles (title .LinkTitle) .LinkTitle }}">
                 {{- dict "Class" "fa-solid fa-angle-right fa-fw" | partial "plugin/icon.html" -}}
               </a>
             {{- else -}}

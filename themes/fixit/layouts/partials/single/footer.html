@@ -24,6 +24,7 @@
             {{- dict "Date" . | T "single.updatedOnDate" -}}&nbsp;
             {{- if $gitRepo -}}
               {{- with $.GitInfo -}}
+                {{/*  TODO add Git .Body  */}}
                 <a class="git-hash" href="{{ printf `%v/commit/%v` $gitRepo .Hash }}" rel="external nofollow noopener noreferrer" target="_blank" title="commit by {{ .AuthorName }}({{ .AuthorEmail }}) {{ .Hash }}: {{ .Subject }}">
                   {{- dict "Class" "fa-solid fa-hashtag fa-fw" | partial "plugin/icon.html" -}}
                   {{- .AbbreviatedHash -}}
@@ -53,13 +54,14 @@
           {{- end -}}
           {{- if $params.LinkToSource | and $gitRepo -}}
             {{- $link := replace $blobURL "{path}" $.File.Path -}}
-            {{- $sourceURL = add $link "?plain=1" -}}
+            {{- $sourceURL = $params.sourceURL | default (add $link "?plain=1") -}}
             {{- $options := dict "Class" "link-to-source" "Destination" $sourceURL "Title" (T "single.viewSource") "Content" (T "single.viewSource") "externalIcon" false -}}
             {{- $linkOptions = $linkOptions | append $options -}}
           {{- end -}}
           {{- if $params.LinkToEdit | and $gitRepo -}}
             {{- $link := replace $editURL "{path}" $.File.Path -}}
-            {{- $options := dict "Class" "link-to-edit" "Destination" $link "Title" (T "single.editThisPage") "Content" (T "single.editThisPage") "externalIcon" false -}}
+            {{- $editURL = $params.editURL | default $link -}}
+            {{- $options := dict "Class" "link-to-edit" "Destination" $editURL "Title" (T "single.editThisPage") "Content" (T "single.editThisPage") "externalIcon" false -}}
             {{- $linkOptions = $linkOptions | append $options -}}
           {{- end -}}
           {{- if $params.LinkToReport | and $gitRepo -}}
@@ -97,23 +99,32 @@
     </section>
   </div>
 
+  {{- $navigation := .Site.Params.navigation -}}
   <div class="post-nav">
     {{- $pages := .Scratch.Get "mainSectionPages" -}}
     {{- $prev := $pages.Prev . -}}
     {{- $next := $pages.Next . -}}
-    {{- if .Site.Params.navigationReverse -}}
+    {{- /* Show the post navigation in section pages */ -}}
+    {{- if $navigation.inSection -}}
+      {{- $prev = .PrevInSection -}}
+      {{- $next = .NextInSection -}}
+    {{- end -}}
+    {{- /* Reverse the next/previous post navigation order */ -}}
+    {{- if $navigation.reverse -}}
       {{- $prev = $pages.Next . -}}
       {{- $next = $pages.Prev . -}}
     {{- end -}}
     {{- with $prev -}}
-      <a href="{{ .RelPermalink }}" class="post-nav-item" rel="prev" title="{{ title .LinkTitle }}">
+      {{- $capitalizeTitles := .Param "capitalizeTitles" -}}
+      <a href="{{ .RelPermalink }}" class="post-nav-item" rel="prev" title="{{ cond $capitalizeTitles (title .LinkTitle) .LinkTitle }}">
         {{- dict "Class" "fa-solid fa-angle-left fa-fw" | partial "plugin/icon.html" -}}
-        {{- title .LinkTitle -}}
+        {{- cond $capitalizeTitles (title .LinkTitle) .LinkTitle -}}
       </a>
     {{- end -}}
     {{ with $next }}
-      <a href="{{ .RelPermalink }}" class="post-nav-item" rel="next" title="{{ title .LinkTitle }}">
-        {{- title .LinkTitle -}}
+      {{- $capitalizeTitles := .Param "capitalizeTitles" -}}
+      <a href="{{ .RelPermalink }}" class="post-nav-item" rel="next" title="{{ cond $capitalizeTitles (title .LinkTitle) .LinkTitle }}">
+        {{- cond $capitalizeTitles (title .LinkTitle) .LinkTitle -}}
         {{- dict "Class" "fa-solid fa-angle-right fa-fw" | partial "plugin/icon.html" -}}
       </a>
     {{- end -}}

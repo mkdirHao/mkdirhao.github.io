@@ -20,8 +20,8 @@ categories:
   - draft
 hiddenFromHomePage: false
 hiddenFromSearch: false
-hiddenFromRss: false
 hiddenFromRelated: false
+hiddenFromFeed: false
 summary:
 resources:
   - name: featured-image
@@ -41,3 +41,5 @@ repost:
 ---
 
 <!--more-->
+
+<!-- Place resource files in the current article directory and reference them using relative paths, like this: `![alt](images/screenshot.jpg)`. -->

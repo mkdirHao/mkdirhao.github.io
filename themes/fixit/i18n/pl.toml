@@ -7,7 +7,7 @@
 [init]
 configurationError = ""
 compatibilityError = ""
-RCVersionWarn = ""
+devVersionWarn = ""
 devEnvWarn = ""
 quicklyUpgrade = ""
 # === init ===
@@ -173,11 +173,21 @@ other = "Offline"
 other = "Nie masz połączenia z Internetem, dostępne będą tylko strony z pamięci podręcznej."
 # === offline ===
 
+# === GitHub Alert ===
+[alert]
+note = ""
+tip = ""
+important = ""
+warning = ""
+caution = ""
+# === GitHub Alert ===
+
 # === shortcodes/admonition.html ===
 [admonition]
 note = "Notka"
 abstract = "Streszczenie"
 info = "Info"
+todo = "Do zrobienia"
 tip = "Wskazówka"
 success = "Sukces"
 question = "Pytanie"

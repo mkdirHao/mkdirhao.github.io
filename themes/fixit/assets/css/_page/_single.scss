@@ -27,10 +27,10 @@
   }
 
   .single-subtitle {
-    margin: 0.5rem 0;
+    margin-block: 0 0.5rem;
     font-size: 1.2rem;
     font-weight: normal;
-    line-height: 100%;
+    line-height: 1.15;
   }
 
   .post-meta {
@@ -73,7 +73,7 @@
   }
 
   .featured-image {
-    margin: 0.5rem 0 1rem 0;
+    margin: 1rem 0;
 
     img {
       display: block;
@@ -131,6 +131,7 @@
   }
 
   .content {
+    margin-block: 1rem;
     > h1,
     > h2 {
       font-size: 1.5em;
@@ -170,7 +171,8 @@
         font-size: inherit;
       }
 
-      &:hover {
+      &:hover,
+      &:target {
         > .heading-mark {
           opacity: 1;
         }
@@ -257,13 +259,10 @@
 
     .table-wrapper {
       overflow-x: auto;
+      --#{$prefix}scrollbar-thumb-color: #{$table-background-color};
 
-      &::-webkit-scrollbar {
-        background-color: $table-background-color;
-
-        [data-theme='dark'] & {
-          background-color: $table-background-color-dark;
-        }
+      [data-theme='dark'] & {
+        --#{$prefix}scrollbar-thumb-color: #{$table-background-color-dark};
       }
 
       > table {
@@ -399,7 +398,7 @@
       @include link(false, true);
     }
 
-    sup[id^='fnref:']:has(.footnote-ref) {
+    sup[id^='fnref']:has(.footnote-ref) {
       padding: 2px 4px;
       background-color: rgba(238, 238, 238, 0.7);
       color: #555555;
@@ -423,6 +422,16 @@
         margin-block: 1em;
         padding-left: 1rem;
       }
+      
+      hr {
+        background-color: var(--#{$prefix}hr-background-color);
+        height: 1px;
+        margin-block: 1em;
+      }
+
+      code {
+        font-size: 0.75rem;
+      }
 
       a:not(.footnote-backref) {
         color: inherit;
@@ -444,14 +453,6 @@
       margin-block: 0;
     }
 
-    .footnotes {
-      hr {
-        background-color: var(--#{$prefix}hr-background-color);
-        height: 1px;
-        margin-block: 1em;
-      }
-    }
-
     kbd {
       display: inline-block;
       padding: 0 0.25rem;
@@ -471,6 +472,7 @@
       }
     }
 
+    @import '../_partials/_single/alert';
     @import '../_partials/_single/code';
     @import '../_shortcodes';
   }

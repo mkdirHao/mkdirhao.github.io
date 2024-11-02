@@ -14,13 +14,13 @@ linkedin:
   Icon:
     Class: fa-brands fa-linkedin fa-fw
 
-# 003: Twitter
+# 003: Twitter (X)
 twitter:
   Weight: 3
   Prefix: https://twitter.com/
-  Title: Twitter
+  Title: X
   Icon:
-    Class: fa-brands fa-twitter fa-fw
+    Class: fa-brands fa-x-twitter fa-fw
 
 # 004: Instagram
 instagram:
@@ -665,6 +665,14 @@ tiktok:
   Icon:
     Class: fa-brands fa-tiktok
 
+# 085 Credly
+credly:
+  Weight: 85
+  Title: Credly
+  Prefix: https://www.credly.com/users/
+  Icon:
+    Class: fa-solid fa-certificate
+
 # Phone
 phone:
   Weight: 997
@@ -684,7 +692,7 @@ email:
 # RSS
 rss:
   Weight: 999
-  Url: /index.xml
+  Url: index.xml
   Title: RSS
   Newtab: true
   Icon:

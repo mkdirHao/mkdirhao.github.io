@@ -6,8 +6,8 @@
 [init]
 configurationError = "配置文件错误\n您还没有正确配置 FixIt 的版本参数。参考 https://fixit.lruihao.cn/zh-cn/documentation/basics/#theme-configuration"
 compatibilityError = "兼容性错误 ({{ .From }} -> {{ .To }}):\n您进行了一次不兼容的更新。参考 https://github.com/hugo-fixit/FixIt/releases"
-RCVersionWarn = "您正在使用开发版的 FixIt，请考虑使用稳定版。\n见 https://github.com/hugo-fixit/FixIt/releases"
-devEnvWarn = "当前运行环境是“development”。“评论系统”，“CDN”和“fingerprint”不会启用。"
+devVersionWarn = "您正在使用开发版的 FixIt，请考虑使用稳定版。\n见 https://github.com/hugo-fixit/FixIt/releases"
+devEnvWarn = "当前运行环境是“development”。“评论系统”、“PWA”、“CDN”和“fingerprint”不会启用。"
 quicklyUpgrade = "使用命令快速升级："
 # === init ===
 
@@ -15,7 +15,7 @@ quicklyUpgrade = "使用命令快速升级："
 [baseof]
 backToTop = "回到顶部"
 viewComments = "查看评论"
-noscript = "FixIt 主题在启用 JavaScript 的情况下效果最佳。"
+noscript = "该网站在启用 JavaScript 的情况下效果最佳。"
 # === baseof ===
 
 # === Taxonomy ===
@@ -168,11 +168,21 @@ other = "离线"
 other = "您没有连接到 Internet，只有缓存的页面可用。"
 # === offline ===
 
+# === GitHub Alert ===
+[alert]
+note = "注意"
+tip = "提示"
+important = "重要"
+warning = "警告"
+caution = "小心"
+# === GitHub Alert ===
+
 # === shortcodes/admonition.html ===
 [admonition]
 note = "注意"
 abstract = "摘要"
 info = "信息"
+todo = "待办"
 tip = "技巧"
 success = "成功"
 question = "问题"

@@ -7,7 +7,7 @@
 [init]
 configurationError = ""
 compatibilityError = ""
-RCVersionWarn = ""
+devVersionWarn = ""
 devEnvWarn = ""
 quicklyUpgrade = ""
 # === init ===
@@ -173,11 +173,21 @@ other = "Оффлине"
 other = "Нисте повезани на Интернет, биће доступне само кеширане странице."
 # === offline ===
 
+# === GitHub Alert ===
+[alert]
+note = ""
+tip = ""
+important = ""
+warning = ""
+caution = ""
+# === GitHub Alert ===
+
 # === shortcodes/admonition.html ===
 [admonition]
 note = "Напомена"
 abstract = "Сажетак"
 info = "Инфо"
+todo = "То-до"
 tip = "Савет"
 success = "Успех"
 question = "Питање"

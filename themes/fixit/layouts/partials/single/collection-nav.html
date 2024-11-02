@@ -1,7 +1,7 @@
 {{- /* Collection Navigation */ -}}
 {{- $params := partial "function/params.html" -}}
 
-{{- if .Params.collections | and $params.collectionNavigation | and (not $params.password) -}}
+{{- if .Params.collections | and $params.collectionNavigation -}}
   {{- $collectionTerms := .GetTerms "collections" -}}
   {{- range $collectionTerms -}}
     {{- $termLink := printf `<a href="%v">%v <span>%v・%v</span></span></a>`
@@ -10,21 +10,24 @@
       (T "collection")
       .LinkTitle
     -}}
-    <div class="collection-card">
+    <div class="collection-card{{ with $params.password }} encrypted-hidden{{ end }}">
       <div class="collection-title text-secondary">
         {{- dict "Collections" $termLink | T "single.includedIn.collections" | strings.FirstUpper | safeHTML }} {{ .Pages.Len -}}
       </div>
       <div class="collection-nav">
+        {{/*  TODO JS 实现 reverse 翻转顺序  */}}
         {{- $pages := (where .Pages "Params.Weight" "!=" nil) | append (where .Pages "Params.Weight" "eq" nil).ByDate -}}
         {{- with $pages.Next $ -}}
-          <a href="{{ .RelPermalink }}" class="collection-nav-item" rel="prev" title="{{ title .LinkTitle }}">
+          {{- $capitalizeTitles := .Param "capitalizeTitles" -}}
+          <a href="{{ .RelPermalink }}" class="collection-nav-item" rel="prev" title="{{ cond $capitalizeTitles (title .LinkTitle) .LinkTitle }}">
             {{- dict "Class" "fa-solid fa-angle-left fa-fw" | partial "plugin/icon.html" -}}
-            <span>{{- title .LinkTitle -}}</span>
+            <span>{{- cond $capitalizeTitles (title .LinkTitle) .LinkTitle -}}</span>
           </a>
         {{- end -}}
         {{- with $pages.Prev $ -}}
-          <a href="{{ .RelPermalink }}" class="collection-nav-item" rel="next" title="{{ title .LinkTitle }}">
-            <span>{{- title .LinkTitle -}}</span>
+          {{- $capitalizeTitles := .Param "capitalizeTitles" -}}
+          <a href="{{ .RelPermalink }}" class="collection-nav-item" rel="next" title="{{ cond $capitalizeTitles (title .LinkTitle) .LinkTitle }}">
+            <span>{{- cond $capitalizeTitles (title .LinkTitle) .LinkTitle -}}</span>
             {{- dict "Class" "fa-solid fa-angle-right fa-fw" | partial "plugin/icon.html" -}}
           </a>
         {{- end -}}

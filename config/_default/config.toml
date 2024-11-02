@@ -15,7 +15,7 @@ title = "mkdirHao'blog"
 # Hostname (and path) to the root
 baseURL = "https://mkdirhao.tech/"
 # theme list
-theme = ["FixIt", "shortcode-mmt-netease"]
+theme = ["fixit", "shortcode-mmt-netease"]
 # theme = ["FixIt"] # enable in your site config file
 # determines default content language ["en", "zh-cn", "fr", "pl", ...]
 defaultContentLanguage = "zh-cn"
@@ -26,7 +26,7 @@ languageName = "简体中文"
 # whether to include Chinese/Japanese/Korean
 hasCJKLanguage =true
 # default amount of posts in each pages
-paginate = 12
+pagination.pagerSize = 12
 # copyright description used only for seo schema
 copyright = "mkdirHao"
 # whether to use robots.txt
@@ -507,14 +507,14 @@ enableEmoji = true
   # FixIt 0.3.0 | NEW Archives page config (all pages of posts type)
   [params.archives]
     # special amount of posts in archives page
-    paginate = 20
+    pagination.pagerSize = 20
     # date format (month and day)
     dateFormat = "01-02"
 
   # Section page config (all pages in section)
   [params.section]
     # special amount of pages in each section page
-    paginate = 20
+    pagination.pagerSize = 20
     # date format (month and day)
     dateFormat = "01-02"
     # amount of RSS pages
@@ -530,7 +530,7 @@ enableEmoji = true
   # List (category or tag) page config
   [params.list]
     # special amount of posts in each list page
-    paginate = 20
+    pagination.pagerSize = 20
     # date format (month and day)
     dateFormat = "01-02"
     # amount of RSS pages
@@ -571,7 +571,7 @@ enableEmoji = true
     [params.home.posts]
       enable = true
       # special amount of posts in each home posts page
-      paginate = 6
+      pagination.pagerSize = 6
 
   # FixIt 0.2.16 | CHANGED Social config about the author
   [params.social]

@@ -63,6 +63,8 @@ enableEmoji = true
       icon = "fa-solid fa-archive"
       # FixIt 0.2.16 | NEW set menu item type, optional values: ["mobile", "desktop"]
       type = ""
+      # FixIt 0.3.9 | NEW whether to show the submenu item divider line
+      divided = false
   [[menu.main]]
     identifier = "categories"
     parent = ""
@@ -133,7 +135,7 @@ enableEmoji = true
 [module]
   [module.hugoVersion]
     extended = true
-    min = "0.123.0"
+    min = "0.134.1"
 
 # -------------------------------------------------------------------------------------
 # Markup related configuration in Hugo
@@ -152,23 +154,41 @@ enableEmoji = true
     ########## necessary configurations ##########
     guessSyntax = true
   # Goldmark is from Hugo 0.60 the default library used for Markdown
+  # https://gohugo.io/getting-started/configuration-markup/#goldmark
   [markup.goldmark]
+    duplicateResourceFiles = false
     [markup.goldmark.extensions]
       definitionList = true
       footnote = true
       linkify = true
-      strikethrough = true
+      linkifyProtocol = 'https'
+      strikethrough = false
       table = true
       taskList = true
       typographer = true
+      # https://gohugo.io/getting-started/configuration-markup/#extras
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.insert]
+          enable = true
+        [markup.goldmark.extensions.extras.mark]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+        [markup.goldmark.extensions.extras.superscript]
+          enable = true
+    # TODO passthrough refactor https://gohugo.io/getting-started/configuration-markup/#parserattributeblock
+    # TODO hugo 0.122.0 https://gohugo.io/content-management/mathematics/
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
     [markup.goldmark.renderer]
+      hardWraps = false
       # whether to use HTML tags directly in the document
       unsafe = true
-  # Table Of Contents settings
-  [markup.tableOfContents]
-    ordered = false
-    startLevel = 2
-    endLevel = 6
+      xhtml = false
 
 # -------------------------------------------------------------------------------------
 # Sitemap Configuration
@@ -177,6 +197,7 @@ enableEmoji = true
 
 [sitemap]
   changefreq = "weekly"
+  disable = false
   filename = "sitemap.xml"
   priority = 0.5
 
@@ -206,12 +227,8 @@ enableEmoji = true
 # -------------------------------------------------------------------------------------
 
 [mediaTypes]
-  # Options to make output .md files
-  [mediaTypes."text/markdown"]
-    suffixes = ["md"]
-  # Options to make output .txt files
-  [mediaTypes."text/plain"]
-    suffixes = ["txt"]
+  # [mediaTypes."application/feed+json"]
+  #   suffixes = ["json"]
 
 # -------------------------------------------------------------------------------------
 # Output Format Definitions
@@ -219,11 +236,6 @@ enableEmoji = true
 # -------------------------------------------------------------------------------------
 
 [outputFormats]
-  # Options to make output .md files
-  [outputFormats.MarkDown]
-    mediaType = "text/markdown"
-    isPlainText = true
-    isHTML = false
   # FixIt 0.3.0 | NEW Options to make output /archives/index.html file
   [outputFormats.archives]
     path = "archives"
@@ -232,6 +244,7 @@ enableEmoji = true
     isPlainText = false
     isHTML = true
     permalinkable = true
+    notAlternative = true
   # FixIt 0.3.0 | NEW Options to make output /offline/index.html file
   [outputFormats.offline]
     path = "offline"
@@ -240,18 +253,29 @@ enableEmoji = true
     isPlainText = false
     isHTML = true
     permalinkable = true
+    notAlternative = true
   # FixIt 0.3.0 | NEW Options to make output readme.md file
-  [outputFormats.README]
+  [outputFormats.readme]
     baseName = "readme"
     mediaType = "text/markdown"
     isPlainText = true
     isHTML = false
+    notAlternative = true
   # FixIt 0.3.0 | CHANGED Options to make output baidu_urls.txt file
   [outputFormats.baidu_urls]
     baseName = "baidu_urls"
     mediaType = "text/plain"
     isPlainText = true
     isHTML = false
+    notAlternative = true
+  # FixIt 0.3.10 | NEW Options to make output search.json file
+  [outputFormats.search]
+    baseName = "search"
+    mediaType = "application/json"
+    rel = "search"
+    isPlainText = true
+    isHTML = false
+    permalinkable = true
 
 # -------------------------------------------------------------------------------------
 # Customizing Output Formats
@@ -259,17 +283,17 @@ enableEmoji = true
 # -------------------------------------------------------------------------------------
 
 # Options to make hugo output files, the optional values are below:
-# home: ["HTML", "RSS", "JSON", "archives", "offline", "README", "baidu_urls"]
-# page: ["HTML", "MarkDown"]
-# section: ["HTML", "RSS"]
-# taxonomy: ["HTML", "RSS"]
-# term: ["HTML", "RSS"]
+# home = ["html", "rss", "archives", "offline", "readme", "baidu_urls", "search"]
+# page = ["html", "markdown"]
+# section = ["html", "rss"]
+# taxonomy = ["html"]
+# term = ["html", "rss"]
 [outputs]
-  home = ["HTML", "RSS", "JSON", "archives"]
-  page = ["HTML", "MarkDown"]
-  section = ["HTML", "RSS"]
-  taxonomy = ["HTML"]
-  term = ["HTML", "RSS"]
+  home = ["html", "rss", "archives", "offline", "search"]
+  page = ["html", "markdown"]
+  section = ["html", "rss"]
+  taxonomy = ["html"]
+  term = ["html", "rss"]
 
 # -------------------------------------------------------------------------------------
 # Taxonomies Configuration
@@ -306,8 +330,8 @@ enableEmoji = true
   enablePWA = false
   # FixIt 0.2.14 | NEW whether to add external Icon for external links automatically
   externalIcon = false
-  # FixIt 0.3.0 | NEW whether to reverse the order of the navigation menu
-  navigationReverse = false
+  # FixIt 0.3.13 | NEW whether to capitalize titles
+  capitalizeTitles = true
   # FixIt 0.3.0 | NEW whether to add site title to the title of every page
   # remember to set up your site title in `hugo.toml` (e.g. title = "title")
   withSiteTitle = true
@@ -316,6 +340,8 @@ enableEmoji = true
   # FixIt 0.3.0 | NEW whether to add site subtitle to the title of index page
   # remember to set up your site subtitle by `params.header.subtitle.name`
   indexWithSubtitle = false
+  # FixIt 0.3.13 | NEW whether to show summary in plain text
+  summaryPlainify = false
   # FixIt 0.2.14 | NEW FixIt will, by default, inject a theme meta tag in the HTML head on the home page only.
   # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
   disableThemeInject = false
@@ -418,13 +444,20 @@ enableEmoji = true
     enable = false
     sticky = false
     showHome = false
+    # FixIt 0.3.13 | NEW
+    separator = "/"
+    capitalize = true
+
+  # FixIt 0.3.10 | NEW Post navigation config
+  [params.navigation]
+    # whether to show the post navigation in section pages scope
+    inSection = false
+    # whether to reverse the next/previous post navigation order
+    reverse = false
 
   # Footer config
   [params.footer]
     enable = true
-    # FixIt 0.2.17 | CHANGED Custom content (HTML format is supported)
-    # For advanced use, see parameter `params.customFilePath.footer`
-    custom = ""
     # whether to show copyright info
     copyright = true
     # whether to show the author
@@ -470,24 +503,33 @@ enableEmoji = true
     paginate = 20
     # date format (month and day)
     dateFormat = "01-02"
-    # amount of RSS pages
-    rss = 10
-    # FixIt 0.2.13 | NEW recently updated pages config
-    # TODO refactor to support archives, section, taxonomy and term
-    [params.section.recentlyUpdated]
-      enable = false
-      rss = false
-      days = 30
-      maxCount = 10
+    # FixIt 0.3.10 | NEW Section feed config for RSS, Atom and JSON feed.
+    [params.section.feed]
+      # The number of posts to include in the feed. If set to -1, all posts.
+      limit = -1
+      # whether to show the full text content in feed.
+      fullText = false
 
-  # List (category or tag) page config
+  # Term list (category or tag) page config
   [params.list]
     # special amount of posts in each list page
     paginate = 20
     # date format (month and day)
     dateFormat = "01-02"
-    # amount of RSS pages
-    rss = 10
+    # FixIt 0.3.10 | NEW Term list feed config for RSS, Atom and JSON feed.
+    [params.list.feed]
+      # The number of posts to include in the feed. If set to -1, all posts.
+      limit = -1
+      # whether to show the full text content in feed.
+      fullText = false
+
+  # FixIt 0.3.13 | NEW recently updated pages config for archives, section and term list
+  [params.recentlyUpdated]
+    archives = true
+    section = true
+    list = true
+    days = 30
+    maxCount = 10
 
   # FixIt 0.2.17 | NEW TagCloud config for tags page
   [params.tagcloud]
@@ -499,8 +541,6 @@ enableEmoji = true
 
   # Home page config
   [params.home]
-    # amount of RSS pages
-    rss = 10
     # Home page profile
     [params.home.profile]
       enable = false
@@ -512,7 +552,7 @@ enableEmoji = true
       avatarMenu = ""
       # title shown in home page (HTML format is supported)
       title = ""
-      # subtitle shown in home page
+      # subtitle shown in home page (HTML format is supported)
       subtitle = ""
       # whether to use typeit animation for subtitle
       typeit = true
@@ -612,6 +652,7 @@ enableEmoji = true
     TryHackMe = ""
     Douyin = ""
     TikTok = ""
+    Credly = ""
     Phone = ""
     Email = ""
     RSS = true
@@ -642,6 +683,12 @@ enableEmoji = true
     # For values, see https://mermaid.js.org/config/theming.html#available-themes
     themes = ["default", "dark"]
 
+  # FixIt 0.3.13 | NEW Admonitions custom config
+  # See https://fixit.lruihao.cn/documentation/content-management/shortcodes/extended/admonition/#custom-admonitions
+  # syntax: <type> = <icon>
+  [params.admonition]
+    # ban = "fa-solid fa-ban"
+
   # FixIt 0.2.12 | NEW PanguJS config
   [params.pangu]
     # For Chinese writing
@@ -671,11 +718,16 @@ enableEmoji = true
     # FixIt 0.2.13 | NEW watermark's fontFamily
     fontFamily = "inherit"
 
-  # FixIt 0.2.12 | NEW Busuanzi count
-  [params.ibruce]
+  # FixIt 0.3.10 | NEW Busuanzi count
+  [params.busuanzi]
+    # whether to enable busuanzi count
     enable = false
-    # Enable in post meta
-    enablePost = false
+    # busuanzi count core script source. Default is https://vercount.one/js
+    source = "https://vercount.one/js"
+    # whether to show the site views
+    siteViews = true
+    # whether to show the page views
+    pageViews = true
 
   # Site verification code config for Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
   [params.verification]
@@ -776,12 +828,30 @@ enableEmoji = true
     # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
     theme = "minimal"
   
-  # FixIt 0.2.17 | NEW Define custom file paths
-  # Create your custom files in site directory `layouts/partials/custom` and uncomment needed files below
-  [params.customFilePath]
-    # aside = "custom/aside.html"
-    # profile = "custom/profile.html"
-    # footer = "custom/footer.html"
+  # FixIt 0.3.10 | NEW Global Feed config for RSS, Atom and JSON feed.
+  [params.feed]
+    # The number of posts to include in the feed. If set to -1, all posts.
+    limit = 10
+    # whether to show the full text content in feed.
+    fullText = true
+    # Site Challenge for Follow: https://follow.is/
+    [params.feed.follow]
+      feedId = ""
+      userId = ""
+
+  # FixIt 0.3.12 | NEW Custom partials config
+  # Custom partials must be stored in the /layouts/partials/ directory.
+  # Depends on open custom blocks https://fixit.lruihao.cn/references/blocks/
+  [params.customPartials]
+    head = []
+    profile = []
+    aside = []
+    comment = []
+    footer = []
+    widgets = []
+    assets = []
+    postFooterBefore = []
+    postFooterAfter = []
 
   # FixIt 0.2.15 | NEW Developer options
   # Select the scope named `public_repo` to generate personal access token,
@@ -790,11 +860,6 @@ enableEmoji = true
     enable = false
     # Check for updates
     c4u = false
-    # Mobile Devtools config
-    [params.dev.mDevtools]
-      enable = false
-      # "vConsole", "eruda" supported
-      type = "vConsole"
 
   # Page config
   [params.page]
@@ -804,14 +869,15 @@ enableEmoji = true
     hiddenFromHomePage = false
     # whether to hide a page from search results
     hiddenFromSearch = false
-    # FixIt 0.3.0 | NEW whether to hide a page from RSS feed
-    hiddenFromRss = false
     # FixIt 0.3.0 | NEW whether to hide a page from related posts
     hiddenFromRelated = false
+    # FixIt 0.3.10 | NEW whether to hide a page from RSS, Atom and JSON feed
+    hiddenFromFeed = false
     # whether to enable twemoji
     twemoji = false
-    # whether to enable lightgallery
-    # FixIt 0.2.18 | CHANGED if set to "force", images in the content will be forced to shown as the gallery.
+    # FixIt 0.2.18 | CHANGED whether to enable lightgallery
+    # set to true, images in the content will be shown as the gallery if the image has a title, e.g. ![alt](src "title")
+    # set to "force", images in the content will be forced to shown as the gallery regardless of the image has a title or not, e.g. ![alt](src)
     lightgallery = false
     # whether to enable the ruby extended syntax
     ruby = true
@@ -829,9 +895,7 @@ enableEmoji = true
     linkToEdit = true
     # FixIt 0.3.0 | NEW whether to show link to report issue for the post
     linkToReport = true
-    # whether to show the full text content in RSS
-    rssFullText = false
-    # FixIt 0.2.13 | NEW Page style ["narrow", "normal", "wide", ...]
+    # FixIt 0.3.10 | CHANGED Page style ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
     # FixIt 0.2.17 | CHANGED Auto Bookmark Support
     # If true, save the reading progress when closing the page.
@@ -863,6 +927,10 @@ enableEmoji = true
       auto = true
       # FixIt 0.2.13 | NEW position of TOC ["left", "right"]
       position = "right"
+      # FixIt 0.3.12 | NEW supersede `markup.tableOfContents` settings
+      ordered = false
+      startLevel = 2
+      endLevel = 6
     # FixIt 0.2.13 | NEW Display a message at the beginning of an article to warn the reader that its content might be expired
     [params.page.expirationReminder]
       enable = false
@@ -876,7 +944,7 @@ enableEmoji = true
     [params.page.heading]
       # FixIt 0.3.3 | NEW whether to capitalize automatic text of headings
       capitalize = false
-      # used with `markup.tableOfContents.ordered` parameter
+      # FixIt 0.3.12 | CHANGED must set `params.page.toc.ordered` to true
       [params.page.heading.number]
         # whether to enable auto heading numbering
         enable = false
@@ -902,11 +970,13 @@ enableEmoji = true
       copyTex = true
       # KaTeX extension mhchem
       mhchem = true
-    # Code config
+    # Code wrapper config
     [params.page.code]
-      # whether to show the copy button of the code block
+      # FixIt 0.3.9 | NEW whether to enable the code wrapper
+      enable = true
+      # whether to show the copy button of the code wrapper
       copy = true
-      # FixIt 0.2.13 | NEW whether to show the edit button of the code block
+      # FixIt 0.2.13 | NEW whether to show the edit button of the code wrapper
       edit = true
       # the maximum number of lines of displayed code by default
       maxShownLines = 10
@@ -915,9 +985,9 @@ enableEmoji = true
       # access token of Mapbox GL JS
       accessToken = ""
       # style for the light theme
-      lightStyle = "mapbox://styles/mapbox/light-v9"
+      lightStyle = "mapbox://styles/mapbox/light-v11"
       # style for the dark theme
-      darkStyle = "mapbox://styles/mapbox/dark-v9"
+      darkStyle = "mapbox://styles/mapbox/dark-v11"
       # whether to add NavigationControl
       navigation = true
       # whether to add GeolocateControl
@@ -1057,6 +1127,7 @@ enableEmoji = true
         texRenderer = false # FixIt 0.2.16 | NEW
         search = false # FixIt 0.2.16 | NEW
         recaptchaV3Key = "" # FixIt 0.2.16 | NEW
+        turnstileKey = "" # FixIt 0.3.8 | NEW
         reaction = false # FixIt 0.2.18 | NEW
       # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
       [params.page.comment.facebook]
@@ -1107,6 +1178,7 @@ enableEmoji = true
         category = ""
         categoryId = ""
         mapping = ""
+        origin = "https://giscus.app" # FixIt NEW | 0.3.7 Or set it to your self-hosted domain
         strict = "0" # FixIt NEW | 0.2.18
         term = ""
         reactionsEnabled = "1"

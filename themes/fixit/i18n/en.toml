@@ -5,8 +5,8 @@
 [init]
 configurationError = "Configuration Error\nYou haven't configured the FixIt version param correctly yet. See https://fixit.lruihao.cn/documentation/basics/#theme-configuration"
 compatibilityError = "Compatibility Error ({{ .From }} -> {{ .To }}):\nYou have an incompatible update. See https://github.com/hugo-fixit/FixIt/releases"
-RCVersionWarn = "You are using a development version of FixIt. Please consider using a stable version.\nSee https://github.com/hugo-fixit/FixIt/releases"
-devEnvWarn = "Current environment is \"development\". The \"comment system\", \"CDN\" and \"fingerprint\" will be disabled."
+devVersionWarn = "You are using a development version of FixIt. Please consider using a stable version.\nSee https://github.com/hugo-fixit/FixIt/releases"
+devEnvWarn = "Current environment is \"development\". The \"comment system\", \"PWA\", \"CDN\" and \"fingerprint\" will be disabled."
 quicklyUpgrade = "Quickly upgrade use command: "
 # === init ===
 
@@ -14,7 +14,7 @@ quicklyUpgrade = "Quickly upgrade use command: "
 [baseof]
 backToTop = "Back to Top"
 viewComments = "View Comments"
-noscript = "Theme FixIt works best with JavaScript enabled."
+noscript = "This website works best with JavaScript enabled."
 # === baseof ===
 
 # === Taxonomy ===
@@ -172,11 +172,21 @@ other = "Offline"
 other = "You are not connected to the Internet, only cached pages will be available."
 # === offline ===
 
+# === GitHub Alert ===
+[alert]
+note = "Note"
+tip = "Tip"
+important = "Important"
+warning = "Warning"
+caution = "Caution"
+# === GitHub Alert ===
+
 # === shortcodes/admonition.html ===
 [admonition]
 note = "Note"
 abstract = "Abstract"
 info = "Info"
+todo = "Todo"
 tip = "Tip"
 success = "Success"
 question = "Question"

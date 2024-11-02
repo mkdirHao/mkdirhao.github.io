@@ -7,7 +7,7 @@
 [init]
 configurationError = ""
 compatibilityError = ""
-RCVersionWarn = ""
+devVersionWarn = ""
 devEnvWarn = ""
 quicklyUpgrade = ""
 # === init ===
@@ -173,11 +173,21 @@ other = "Deconectat"
 other = "Nu sunteți conectat la Internet, vor fi disponibile doar paginile stocate în cache."
 # === offline ===
 
+# === GitHub Alert ===
+[alert]
+note = ""
+tip = ""
+important = ""
+warning = ""
+caution = ""
+# === GitHub Alert ===
+
 # === shortcodes/admonition.html ===
 [admonition]
 note = "Notă"
 abstract = "Rezumat"
 info = "Info"
+todo = "De făcut"
 tip = "Sfat"
 success = "Succes"
 question = "Întrebare"

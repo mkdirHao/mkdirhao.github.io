@@ -7,7 +7,7 @@
 [init]
 configurationError = ""
 compatibilityError = ""
-RCVersionWarn = ""
+devVersionWarn = ""
 devEnvWarn = ""
 quicklyUpgrade = ""
 # === init ===
@@ -173,11 +173,21 @@ other = "desconectado"
 other = "No está conectado a Internet, solo estarán disponibles las páginas almacenadas en caché."
 # === offline ===
 
+# === GitHub Alert ===
+[alert]
+note = ""
+tip = ""
+important = ""
+warning = ""
+caution = ""
+# === GitHub Alert ===
+
 # === shortcodes/admonition.html ===
 [admonition]
 note = "Nota"
 abstract = "Resumen"
 info = "Información"
+todo = "Por hacer"
 tip = "Consejo"
 success = "Éxito"
 question = "Pregunta"

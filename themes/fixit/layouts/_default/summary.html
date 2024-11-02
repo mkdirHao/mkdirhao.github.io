@@ -12,7 +12,7 @@
   {{- with $image -}}
     <div class="featured-image-preview">
       <a href="{{ $.RelPermalink }}" aria-label="{{ $.Title }}">
-        {{- dict "Src" . "Title" $.Description "Alt" $.Title "Resources" $.Resources | partial "plugin/image.html" -}}
+        {{- dict "Src" . "Title" $.Description "Alt" $.Title "Resources" $.Resources "Width" "50%" "Height" "50%" | partial "plugin/image.html" -}}
       </a>
     </div>
   {{- end -}}
@@ -31,7 +31,7 @@
         <span title="{{ $title }}" class="icon-repost">{{- $icon | partial "plugin/icon.html" -}}</span>
       {{- end -}}
     {{- end -}}
-    <a href="{{ .RelPermalink }}">{{ title .Title }}</a>
+    <a href="{{ .RelPermalink }}">{{ cond (.Param "capitalizeTitles") (title .Title) .Title }}</a>
   </h2>
 
   {{- /* Meta */ -}}
@@ -49,8 +49,14 @@
 
   {{- /* Summary content */ -}}
   <div class="content">
-    {{- with .Summary -}}
-      {{- dict "Content" . "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+    {{- if .Summary -}}
+      {{- $plainify := (.Param "summaryPlainify") | default false -}}
+      {{- with .Markup "home" -}}
+        {{- with .Render -}}
+          {{- $summary := dict "Content" .Summary.Text "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+          {{- cond $plainify ($summary | plainify) $summary -}}
+        {{- end -}}
+      {{- end -}}
     {{- else -}}
       {{- .Description | safeHTML -}}
     {{- end -}}
@@ -70,3 +76,4 @@
     {{- end -}}
   </div>
 </article>
+{{- /* EOF */ -}}

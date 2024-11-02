@@ -1,6 +1,6 @@
 {
   "name": "fixit-src",
-  "version": "0.3.6",
+  "version": "0.3.13",
   "private": true,
   "description": "FixIt theme source files",
   "keywords": [
@@ -18,16 +18,19 @@
   },
   "license": "MIT",
   "author": "Lruihao (https://lruihao.cn)",
+  "type": "module",
   "scripts": {
     "build": "hugo --source=demo --themesDir ../.. --theme $PWD --gc --minify --logLevel info",
     "server": "hugo server --source=demo --themesDir ../.. --theme $PWD -D --disableFastRender --navigateToChanged --ignoreCache",
     "server:production": "npm run server -- -e production",
     "server:docs": "hugo server --source=../fixit-docs -D --disableFastRender --navigateToChanged --ignoreCache",
-    "version": "sed -i '' \"s/v$npm_package_version-RC/v$npm_package_version/g\" layouts/partials/init/index.html && git add .",
+    "version": "fixit-releaser version --prod",
     "postversion": "git push && git push --tags && npm run release",
-    "release": "auto-changelog --config .auto-changelog/config.json"
+    "release": "fixit-releaser changelog",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "auto-changelog": "^2.4.0"
+    "@hugo-fixit/fixit-releaser": "^1.0.1",
+    "husky": "^9.1.6"
   }
 }
