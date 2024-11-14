@@ -37,7 +37,7 @@ date: 2022-02-26T21:38:52+08:00
  {{< link "https://github.com/mkdirHao" "github" "this a nice man" true true >}}
 
  
-{{< link "mailto:mkdirhao@qq.com" "mail" "mail to me" true false >}}
+{{< link "mailto:mkdirhao@gmail.com" "mail" "mail to me" true false >}}
 
 {{< reward wechatpay="/images/wechat.jpg" alipay="/images/alipay.jpg" paypal="/images/paypal.png" comment="Buy me a coffee～" mode="fixed" >}}
 

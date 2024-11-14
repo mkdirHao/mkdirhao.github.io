@@ -33,7 +33,7 @@ just for fun
 {{< link "https://github.com/mkdirHao" "github" "this a nice man" true true >}}
 
  
-{{< link "mailto:mkdirhao@qq.com" "mail" "mail to me" true false >}}
+{{< link "mailto:mkdirhao@gmail.com" "mail" "mail to me" true false >}}
 
 {{< reward wechatpay="/images/wechat.jpg" alipay="/images/alipay.jpg" comment="给作者来碗老北京豆汁～" mode="fixed" >}}
 
