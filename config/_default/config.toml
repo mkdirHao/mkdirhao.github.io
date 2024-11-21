@@ -15,7 +15,7 @@ title = "mkdirHao'blog"
 # Hostname (and path) to the root
 baseURL = "https://mkdirhao.tech/"
 # theme list
-theme = ["fixit", "shortcode-mmt-netease"]
+theme = ["fixit", "shortcode-mmt-netease","cmpt-flyfish"]
 # theme = ["FixIt"] # enable in your site config file
 # determines default content language ["en", "zh-cn", "fr", "pl", ...]
 defaultContentLanguage = "zh-cn"
@@ -683,6 +683,24 @@ enableEmoji = true
     duration = -1
     # FixIt 0.2.18 | NEW whether your strings will continuously loop after completing
     loop = false
+  
+  [params.customPartials]
+    head = []
+    profile = []
+    aside = []
+    comment = []
+    footer = []
+    widgets = []
+    assets = [
+      "inject/cmpt-flyfish.html",
+    ]
+    postFooterBefore = []
+    postFooterAfter = []
+
+  [params.flyfish]
+    enable = true
+    light = "rgb(0 119 190 / 10%)"
+    dark = "rgb(255 255 255 / 10%)"
 
   # FixIt 0.2.15 | NEW Mermaid config
   [params.mermaid]

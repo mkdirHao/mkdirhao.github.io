@@ -2,3 +2,6 @@
 [submodule "themes/shortcode-mmt-netease"]
 	path = themes/shortcode-mmt-netease
 	url = https://github.com/Lruihao/hugo-shortcode-mmt-netease.git
+[submodule "themes/cmpt-flyfish"]
+	path = themes/cmpt-flyfish
+	url = https://github.com/hugo-fixit/cmpt-flyfish.git
