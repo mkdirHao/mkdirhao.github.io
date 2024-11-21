@@ -59,7 +59,7 @@ copy theme:
 source ~/.zshrc;
 ```
 
-# 我的zsh插件
+## 我的zsh插件
 
 ```bash
 
