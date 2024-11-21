@@ -9,7 +9,7 @@ keywords:
 license:
 comment: true
 weight: 0
-tags: ["zsh"]
+tags: ["zsh","环境配置"]
 categories: ["环境配置"]
 collections: []
 hiddenFromHomePage: false

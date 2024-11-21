@@ -369,7 +369,7 @@ enableEmoji = true
   # Author Configuration
   [params.author]
     name = "mkdirHao"
-    email = "mkdirhao@qq.com"
+    email = "mkdirhao@gmail.com"
     link = ""
     avatar = "/icon.svg"
   
@@ -552,7 +552,7 @@ enableEmoji = true
     [params.home.profile]
       enable = true
       # Gravatar Email for preferred avatar in home page
-      gravatarEmail = "mkdirhao@qq.com"
+      gravatarEmail = "mkdirhao@gmail.com"
       # URL of avatar shown in home page
       avatarURL = "/icon.svg"
       # FixIt 0.2.17 | NEW identifier of avatar menu link
@@ -660,7 +660,7 @@ enableEmoji = true
     Douyin = ""
     TikTok = ""
     Phone = ""
-    Email = "mkdirHao@qq.com"
+    Email = "mkdirhao@gmail.com"
     RSS = true
     # custom social links like the following
     # [params.social.twitter]

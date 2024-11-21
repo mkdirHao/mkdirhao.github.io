@@ -24,7 +24,7 @@ copyright = "This work is licensed under CC BY-NC-SA-4.0."
 
 [params.author]
 name = "Hao"
-email = "mkdirhao@qq.com"
+email = "mkdirhao@gmail.com"
 link = ""
 avatar = "/icon.svg"
 # -------------------------------------------------------------------------------------
@@ -149,7 +149,7 @@ avatar = "/icon.svg"
     [params.home.profile]
       enable = true
       # Gravatar Email for preferred avatar in home page
-      gravatarEmail = "mkdirhao@qq.com"
+      gravatarEmail = "mkdirhao@gmail.com"
       # URL of avatar shown in home page
       avatarURL = "/icon.svg"
       # FixIt 0.2.17 | NEW identifier of avatar menu link
