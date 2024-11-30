@@ -1,0 +1,21 @@
+# Translations for Simplified Chinese
+# 简体中文的翻译
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+[anonymous]
+other = "匿名"
+
+[rewardLog.statistics]
+total = "总计"
+singleLargest = "单笔最大"
+from = "{{ .Sponsor }} 的 {{ .Money }}"
+
+[rewardLog]
+content = "{{ .Sponsor }} 通过 {{ .Origin }} 打赏了 {{ .Money }}"
+remark = "备注：{{ . }}"
+
+[rewardLog.origin]
+alipay = "支付宝"
+bitcoin = "比特币"
+paypal = "贝宝"
+wechatpay = "微信"

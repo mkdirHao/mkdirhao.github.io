@@ -1,0 +1,76 @@
+# Header config
+  [header]
+    # FixIt 0.2.13 | CHANGED desktop header mode ["sticky", "normal", "auto"]
+    desktopMode = "sticky"
+    # FixIt 0.2.13 | CHANGED mobile header mode ["sticky", "normal", "auto"]
+    mobileMode = "auto"
+    # Header title config
+    [header.title]
+      # URL of the LOGO
+      logo = "/icon.svg"
+      # title name
+      name = "mkdirHao"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      pre = ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+      # whether to use typeit animation for title name
+      typeit = false
+    # FixIt 0.2.12 | NEW Header subtitle config
+    [header.subtitle]
+      # subtitle name
+      name = "forever young"
+      # whether to use typeit animation for subtitle name
+      typeit = true
+  # Home page config
+  [home]
+    # amount of RSS pages
+    rss = 10
+    # Home page profile
+    [home.profile]
+      enable = true
+      # Gravatar Email for preferred avatar in home page
+      gravatarEmail = "mkdirhao@gmail.com"
+      # URL of avatar shown in home page
+      avatarURL = "/icon.svg"
+      # FixIt 0.2.17 | NEW identifier of avatar menu link
+      avatarMenu = ""
+      # title shown in home page (HTML format is supported)
+      title = "mkdirHao"
+      # subtitle shown in home page
+      subtitle = "in spring flowers grow \n in autumn the moon glows\n in summer breezes blow \n in winter it snows \n when nothing bothers you \nthat’s the best time of life"
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
+      # disclaimer (HTML format is supported)
+      disclaimer = "If there are different opinions, you are right.👍"
+    # Home page posts
+    [home.posts]
+      enable = true
+      # special amount of posts in each home posts page
+      paginate = 6
+  [page.reward]
+      enable = true
+      animation = true
+      # position relative to post footer, optional values: ["before", "after"]
+      position = "before"
+      
+      comment = "Buy me a coffee "
+      # comment = "Buy me a coffee"
+      # FixIt 0.2.18 | NEW display mode of QR code images, optional values: ["static", "fixed"], default: `static`
+      mode = "fixed"
+      [page.reward.ways]
+       wechatpay = "/images/wechat.jpg"
+       alipay = "/images/alipay.jpg"
+        # wechatpay = "/images/wechatpay.png"
+        # alipay = "/images/alipay.png"
+        paypal = "/images/paypal.png"
+        # bitcoin = "/images/bitcoin.png"
+  [author]
+    name = "hao"
+    email = "mkdirhao@gmail.com"
+    link = ""
+    avatar = "/icon.svg"
+  [social]
+    Paypal = "mkdirhao"

@@ -1,0 +1,20 @@
+# Translations for English
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+[anonymous]
+other = "Anonymous"
+
+[rewardLog.statistics]
+total = "Total"
+singleLargest = "The single largest"
+from = "{{ .Money }} from {{ .Sponsor }}"
+
+[rewardLog]
+content = "{{ .Sponsor }} sponsored {{ .Money }} via {{ .Origin }}"
+remark = "Remark: {{ . }}"
+
+[rewardLog.origin]
+alipay = "Alipay"
+bitcoin = "Bitcoin"
+paypal = "PayPal"
+wechatpay = "WeChat Pay"

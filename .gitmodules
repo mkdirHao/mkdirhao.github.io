@@ -5,3 +5,9 @@
 [submodule "themes/cmpt-flyfish"]
 	path = themes/cmpt-flyfish
 	url = https://github.com/hugo-fixit/cmpt-flyfish.git
+[submodule "themes/component-projects"]
+	path = themes/component-projects
+	url = https://github.com/hugo-fixit/component-projects.git
+[submodule "themes/shortcode-caniuse"]
+	path = themes/shortcode-caniuse
+	url = https://github.com/hugo-fixit/shortcode-caniuse.git

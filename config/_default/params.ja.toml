@@ -1,0 +1,77 @@
+# Header config
+  [header]
+    # FixIt 0.2.13 | CHANGED desktop header mode ["sticky", "normal", "auto"]
+    desktopMode = "sticky"
+    # FixIt 0.2.13 | CHANGED mobile header mode ["sticky", "normal", "auto"]
+    mobileMode = "auto"
+    # Header title config
+    [header.title]
+      # URL of the LOGO
+      logo = "/icon.svg"
+      # title name
+      name = "高位の無限郝"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      pre = ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+      # whether to use typeit animation for title name
+      typeit = false
+    # FixIt 0.2.12 | NEW Header subtitle config
+    [header.subtitle]
+      # subtitle name
+      name = "forever young"
+      # whether to use typeit animation for subtitle name
+      typeit = true
+  # Home page config
+  [home]
+    # amount of RSS pages
+    rss = 10
+    # Home page profile
+    [home.profile]
+      enable = true
+      # Gravatar Email for preferred avatar in home page
+      gravatarEmail = "mkdirhao@gmail.com"
+      # URL of avatar shown in home page
+      avatarURL = "/icon.svg"
+      # FixIt 0.2.17 | NEW identifier of avatar menu link
+      avatarMenu = ""
+      # title shown in home page (HTML format is supported)
+      title = "高位の無限郝"
+      # subtitle shown in home page
+      subtitle = "春は百花が咲き、秋には月が美しく\n夏には爽やかな風が吹き、冬には雪が降る\n若し心頭に掛く閒事無かれば\n便ち是れ人間の好ひ時節なり"
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
+      # disclaimer (HTML format is supported)
+      disclaimer = "もし意見が異なる場合は、あなたが正しいです。👍"
+    # Home page posts
+    [home.posts]
+      enable = true
+      # special amount of posts in each home posts page
+      paginate = 6
+  [page.reward]
+      enable = true
+      animation = true
+      # position relative to post footer, optional values: ["before", "after"]
+      position = "before"
+      
+      comment = "Buy me a coffee "
+      # comment = "Buy me a coffee"
+      # FixIt 0.2.18 | NEW display mode of QR code images, optional values: ["static", "fixed"], default: `static`
+      mode = "fixed"
+      [page.reward.ways]
+       wechatpay = "/images/wechat.jpg"
+       alipay = "/images/alipay.jpg"
+        # wechatpay = "/images/wechatpay.png"
+        # alipay = "/images/alipay.png"
+        paypal = "/images/paypal.png"
+        # bitcoin = "/images/bitcoin.png"
+  [social]
+    Paypal = "mkdirhao"
+
+  [author]
+    name = "Hao"
+    email = "mkdirhao@gmail.com"
+    link = ""
+    avatar = "/icon.svg"

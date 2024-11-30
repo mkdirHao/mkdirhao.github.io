@@ -1,0 +1,26 @@
+[author]
+name = "Hao"
+email = "mkdirhao@gmail.com"
+link = ""
+avatar = "/icon.svg"
+[page]
+endFlag = "本文结束,转载请注明出处,附上原文链接即可 "
+[page.reward]
+      enable = true
+      animation = true
+      # position relative to post footer, optional values: ["before", "after"]
+      position = "before"
+      
+      comment = "Buy me a coffee or 来一碗老北京豆汁"
+      # comment = "Buy me a coffee"
+      # FixIt 0.2.18 | NEW display mode of QR code images, optional values: ["static", "fixed"], default: `static`
+      mode = "fixed"
+      [page.reward.ways]
+       wechatpay = "/images/wechat.jpg"
+       alipay = "/images/alipay.jpg"
+        # wechatpay = "/images/wechatpay.png"
+        # alipay = "/images/alipay.png"
+        # paypal = "/images/paypal.png"
+        # bitcoin = "/images/bitcoin.png"
+[social]
+ Youtubechannel = ""

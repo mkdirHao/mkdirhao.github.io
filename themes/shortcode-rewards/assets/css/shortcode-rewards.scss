@@ -1,0 +1,107 @@
+// Color of the border
+$global-border-color: #f0f0f0 !default;
+$global-border-color-dark: #363636 !default;
+
+.reward-message {
+  margin-top: 1rem;
+  & + .reward-statistics {
+    margin-top: 0.5rem;
+  }
+}
+.reward-statistics {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: 1px solid darken($global-border-color, 10%);
+  border-radius: 0.25rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  [data-theme="dark"] & {
+    border-color: lighten($global-border-color-dark, 10%);
+  }
+
+  .reward-statistics-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    width: 30%;
+
+    &.top3 {
+      align-items: flex-start;
+      line-height: 1.5;
+
+      li {
+        padding-block: 2px;
+      }
+
+      .name {
+        display: inline-block;
+        width: 100px;
+        margin-right: 0.25rem;
+        vertical-align: bottom;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .title {
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+    .number {
+      font-size: 20px;
+      padding: 0 4px;
+    }
+  }
+}
+.fi-timeline.reward-logs {
+  border: 1px solid darken($global-border-color, 10%);
+  border-radius: 0.25rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 0 !important;
+  border-top: 0;
+
+  .fi-timeline-item {
+    &:first-child {
+      padding: 1.5rem 1.75rem 0.5rem;
+      &::before {
+        top: 2.25rem;
+      }
+    }
+    &:last-child {
+      padding: 0.5rem 1.75rem 1.5rem;
+    }
+  }
+
+  [data-theme="dark"] & {
+    border-color: lighten($global-border-color-dark, 10%);
+  }
+}
+
+// ==============================
+// Mobile style
+// ==============================
+@media only screen and (max-width: 680px) {
+  .reward-statistics {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    .reward-statistics-item {
+      width: 100%;
+      scroll-snap-align: center;
+
+      &.top3 {
+        .name {
+          width: 200px;
+        }
+      }
+    }
+  }
+}

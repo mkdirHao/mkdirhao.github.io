@@ -1,0 +1,19 @@
+# -------------------------------------------------------------------------------------
+# Customizing Output Formats | 自定义输出格式
+# See: https://gohugo.io/templates/output-formats/#customizing-output-formats
+# -------------------------------------------------------------------------------------
+
+_merge = "shollow"
+
+# Options to make hugo output files, the optional values are below:
+# 用于 Hugo 输出文档的设置，可选值如下：
+# home = ["html", "rss", "archives", "offline", "readme", "baidu_urls", "search"]
+# page = ["html", "markdown"]
+# section = ["html", "rss"]
+# taxonomy = ["html"]
+# term = ["html", "rss"]
+home = ["html", "rss", "archives", "offline", "readme", "baidu_urls", "search"]
+page = ["html", "markdown"]
+section = ["html", "rss"]
+taxonomy = ["html"]
+term = ["html", "rss"]

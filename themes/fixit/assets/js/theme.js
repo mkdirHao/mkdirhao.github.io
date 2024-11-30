@@ -464,7 +464,7 @@ class FixIt {
           }
           $copy.title = this.config.code.copyTitle;
           $copy.addEventListener('click', () => {
-            navigator.clipboard.writeText(code).then(() => {
+            this.util.copyText(code).then(() => {
               this.util.animateCSS($code, 'animate__flash');
             }, () => {
               console.error('Clipboard write failed!', 'Your browser does not support clipboard API!');
@@ -601,11 +601,11 @@ class FixIt {
   }
 
   initMermaid() {
-    if (!window.mermaid?.initialize) {
+    if (!this.config.mermaid) {
       return;
     }
     const _initializeAndRun = () => {
-      const themes = window.mermaid.themes ?? ['default', 'dark'];
+      const themes = this.config.mermaid.themes ?? ['default', 'dark'];
       window.mermaid.initialize({
         securityLevel: 'loose',
         startOnLoad: false,
@@ -999,6 +999,8 @@ class FixIt {
     }
     const selector = this.config.pangu.selector;
     if (selector) {
+      // to avoid extra spaces for extended Markdown syntax fraction in Chinese
+      pangu.ignoredTags = /^(script|code|pre|textarea|sup|sub)$/i;
       if (selector.startsWith('#')) {
         pangu.spacingElementById(selector.slice(1));
       } else if (selector.startsWith('.')) {

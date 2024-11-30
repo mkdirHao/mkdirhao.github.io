@@ -194,7 +194,6 @@
 
     p {
       margin: 0.5rem 0;
-      text-indent: 2rem;
     }
 
     b,
@@ -227,11 +226,42 @@
     ol,
     dl {
       margin-block: 0.5em;
-      margin-left: 2rem;
     }
 
     ul {
       list-style-type: disc;
+
+      // Task lists
+      li[data-task] {
+        list-style: none;
+        margin-left: -1.5rem;
+      }
+    }
+
+    // Task lists
+    li[data-task] {
+      color: var(--#{$prefix}task-color);
+      .checkbox-icon {
+        margin-right: 0.25em;
+        color: var(--#{$prefix}checkbox-color);
+      }
+    }
+    li[data-task='x'],
+    li[data-task='-'] {
+      --#{$prefix}task-color: var(--#{$prefix}secondary);
+      text-decoration: line-through;
+    }
+    li[data-task='x'] {
+      --#{$prefix}checkbox-color: var(--#{$prefix}primary);
+    }
+    li[data-task='/'] {
+      --#{$prefix}task-color: var(--#{$prefix}success);
+    }
+    li[data-task='!'] {
+      --#{$prefix}checkbox-color: var(--#{$prefix}danger);
+    }
+    li[data-task='?'] {
+      --#{$prefix}checkbox-color: var(--#{$prefix}warning);
     }
 
     dl {
@@ -255,6 +285,20 @@
 
         rt {
           color: $global-font-secondary-color-dark;
+        }
+      }
+    }
+
+    mark {
+      padding: 0.14em 0.28em;
+      background-color: var(--#{$prefix}mark-background-color, mark);
+      color: var(--#{$prefix}mark-color, marktext);
+      @include border-radius($global-border-radius);
+
+      @each $color, $value in $theme-colors {
+        &.mark-#{$color} {
+          --#{$prefix}mark-color: #fff;
+          --#{$prefix}mark-background-color: var(--#{$prefix}#{$color});
         }
       }
     }
