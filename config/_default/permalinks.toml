@@ -1,0 +1,8 @@
+# -------------------------------------------------------------------------------------
+# Permalinks Configuration | Permalinks 配置
+# See: https://gohugo.io/content-management/urls/#permalinks
+# -------------------------------------------------------------------------------------
+
+# posts = ":year/:month/:filename"
+documentation = ":sections[0:]/:slugorfilename"
+guides = "guides/:slugorfilename"
