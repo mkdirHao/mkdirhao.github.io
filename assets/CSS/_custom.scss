@@ -4,10 +4,10 @@
 // ==============================
 
 /*首行缩进两个字符 */
-.content p {
+.single.content p {
     text-indent: 2rem;
 }
 
-.content ul, ol, dl {
+.single.content ul, ol, dl {
     margin-left: 2rem;
 }
