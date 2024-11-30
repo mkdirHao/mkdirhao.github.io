@@ -237,7 +237,7 @@
     [home.posts]
       enable = true
       # special amount of posts in each home posts page
-      pagination.pagerSize = 6
+      pagination.pagerSize = 10
 
   # FixIt 0.2.16 | CHANGED Social config about the author
   [social]
