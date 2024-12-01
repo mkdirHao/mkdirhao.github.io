@@ -80,9 +80,31 @@
     parent = ""
     pre = ""
     post = ""
-    name = "是我"
+    name = "关于"
     url = "/about/"
     title = ""
     weight = 100
     [main.params]
-      icon = "fa-solid fa-heart"
+      icon = "fa-solid fa-circle-info"
+  [[main]]
+    identifier = "me"
+    parent = "about"
+    pre = ""
+    post = ""
+    name = "关于我"
+    url = "/about/"
+    title = ""
+    weight = 101
+    [main.params]
+      icon = "fa-regular fa-id-badge"
+  [[main]]
+    identifier = "timeline"
+    parent = "about"
+    pre = ""
+    post = ""
+    name = "人生进度条"
+    url = "/timeline/"
+    title = ""
+    weight = 102
+    [main.params]
+      icon = "fa-solid fa-timeline"

@@ -1,5 +1,5 @@
 ---
-title: "是我!"
+title: "关于我!"
 date: 2022-02-26T21:38:52+08:00
 
 #menu: "main"
@@ -36,8 +36,5 @@ just for fun
 {{< link "mailto:mkdirhao@gmail.com" "mail" "mail to me" true false >}}
 
 {{< reward wechatpay="/images/wechat.jpg" alipay="/images/alipay.jpg" comment="给作者来碗老北京豆汁～" mode="fixed" >}}
-
-
-
 
 
