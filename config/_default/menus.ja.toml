@@ -81,9 +81,9 @@
     parent = ""
     pre = ""
     post = ""
-    name = "それは私"
+    name = "について"
     url = "/about/"
     title = ""
     weight = 100
     [main.params]
-      icon = "fa-solid fa-heart"
+      icon = "fa-solid fa-circle-info"

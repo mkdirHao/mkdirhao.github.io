@@ -81,10 +81,10 @@
     parent = ""
     pre = ""
     post = ""
-    name = "It's me"
+    name = "about"
     url = "/about/"
     title = ""
     weight = 100
     [main.params]
-      icon = "fa-solid fa-heart"
+      icon = "fa-solid fa-circle-info"
    
