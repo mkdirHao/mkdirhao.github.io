@@ -25,8 +25,8 @@ resources:
 toc: true
 math: false
 lightgallery: false
-password: 1997
-message:
+password: 1234
+message: 密码是1234,请输入试试看吧
 repost:
   enable: false
   url:
