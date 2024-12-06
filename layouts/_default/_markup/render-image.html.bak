@@ -1,4 +1,4 @@
-{{- $url := urls.Parse .Destination -}}
+<!-- {{- $url := urls.Parse .Destination -}}
 {{- $scheme := $url.Scheme -}}
 
 <img src="
@@ -15,4 +15,4 @@
   {{- with .Text }} alt="{{ . | safeHTML }}"
   {{- end -}}
 />
-
+ -->
