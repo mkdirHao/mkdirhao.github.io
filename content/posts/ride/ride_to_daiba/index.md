@@ -29,7 +29,7 @@ resources:
     src: featured-image-preview.png
 toc: true
 math: false
-lightgallery: false
+lightgallery: force
 password:
 message:
 repost:
