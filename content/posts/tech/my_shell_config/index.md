@@ -40,7 +40,7 @@ repost:
 ### 主题
 [ChesterYue/ohmyzsh-theme-passion: An oh-my-zsh theme.](https://github.com/ChesterYue/ohmyzsh-theme-passion)
 
-![1732200227588](image/我的zsh配置/1732200227588.png)
+![1732200227588](image/my_shell_config/1732200227588.png)
 
 
 如果你也想试试这主题的话,按下面的顺序执行吧.
@@ -81,7 +81,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.
 
 ### 效果
 
-![1733492618112](image/我的zsh配置/1733492618112.png)
+![1733492618112](image/my_shell_config/1733492618112.png)
 
 ### 下载安装
 
