@@ -16,7 +16,7 @@ tags:
 categories:
   - 骑行
   - 日常
-collections:
+collections: ["骑行"]
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
