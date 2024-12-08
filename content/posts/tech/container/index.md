@@ -96,3 +96,37 @@ make
 [15:08:26] [~/Desktop/ing/code/containerd] [v2.0.0 ✖] ❱❱❱ ./bin/containerd -v
 containerd-hao github.com/containerd/containerd/v2 v2.0.0.m 207ad711eabd375a01713109a8a197d197ff6542.m
 ```
+
+## 如何编译Kubernetes
+
+> [!Tip] 需要拥有golang环境，其他问题请看k8s官方文档[kubernetes/build/README.md ](https://github.com/kubernetes/kubernetes/blob/master/build/README.md)
+
+> [!Tip]我的编译环境manjaro linux amd64  | go1.23.4 linux/amd64
+
+clone代码
+
+```bash
+git clone https://github.com/kubernetes/kubernetes
+```
+打开代码目录切换到1.32版本的分支
+ ```bash
+  cd kubernetes
+  git checkout release-1.32 
+```
+修改编译平台，把用不到的平台注释掉
+```bash
+nvim hack/lib/golang.sh
+```
+
+编译
+```bash
+  KUBE_BUILD_PLATFORMS=linux/amd64 make all  GOFLAGS=-v GOGCFLAGS="-N -l"
+```
+查看编译结果,编译完的二进制在_output文件夹内
+
+```bash
+ ❱❱❱ ls _output/bin
+apiextensions-apiserver  e2e_node.test  go-runner        kube-apiserver           kube-log-runner  kube-scheduler  kubectl          kubelet   mounter
+e2e.test                 ginkgo         kube-aggregator  kube-controller-manager  kube-proxy       kubeadm         kubectl-convert  kubemark
+
+```
