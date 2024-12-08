@@ -38,7 +38,7 @@ repost:
 
 ## 如何编译containerd
 
-
+> [!Tip]更多问题请参考官方文档[containerd/BUILDING.md](https://github.com/containerd/containerd/blob/v2.0.0/BUILDING.md)
 ### 编译前准备
 
 
