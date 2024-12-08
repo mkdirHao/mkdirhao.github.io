@@ -11,7 +11,7 @@ comment: true
 weight: 0
 tags: ["zsh","环境配置"]
 categories: ["环境配置"]
-collections: []
+collections: ["develop"]
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false

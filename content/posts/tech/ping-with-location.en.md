@@ -4,6 +4,7 @@ date: 2022-02-28T22:04:05+08:00
 draft: false
 tags: ["daily", "tech"]
 categories: ["daily"]
+collections: ["develop"]
 ---
 
 # prerare

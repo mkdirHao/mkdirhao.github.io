@@ -11,7 +11,7 @@ comment: true
 weight: 0
 tags: ["linux","科技"]
 categories: ["linux","科技"]
-collections: ["linux"]
+collections: ["develop"]
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false

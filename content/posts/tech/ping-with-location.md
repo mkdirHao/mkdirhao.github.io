@@ -4,6 +4,7 @@ date: 2022-02-28T22:04:05+08:00
 draft: false
 tags: ["日常", "科技"]
 categories: ["日常"]
+collections: ["develop"]
 ---
 
 # 准备工作

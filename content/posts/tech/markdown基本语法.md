@@ -11,7 +11,7 @@ comment: true
 weight: 1
 tags: ["markdown","科技"]
 categories: ["markdown","科技"]
-collections: []
+collections: ["develop"]
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
