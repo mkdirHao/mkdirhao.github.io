@@ -11,7 +11,7 @@ comment: true
 weight: 1
 tags: ["心理","情绪问题","抑郁","焦虑"]
 categories: ["心理","情绪问题"]
-collections: []
+collections: ["个人提升"]
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
