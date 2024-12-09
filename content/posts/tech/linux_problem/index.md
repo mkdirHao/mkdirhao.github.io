@@ -40,3 +40,16 @@ repost:
 
 ![alt text](image/1733597806061.png)
 
+## 把go加入环境变量
+打开zshrc添加以下变量
+```bash
+export GOROOT=~/go
+export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:/usr/lib/go/bin
+
+```
+## vscode设置字体
+这样前一个英文字体是jetbrains 后一个就是喜欢的中文字体
+```json
+'JetBrains Mono','LXGW WenKai Mono Screen'
+```
