@@ -36,7 +36,7 @@ repost:
 本文描述了vue的基本概念
 <!--more-->
 
-[TOC]
+> [!tip] 本文内容可能已经过时，最新内容请看vue官网[Vue.js](https://cn.vuejs.org/guide/introduction)
 
 ## 一、Vue基础
 

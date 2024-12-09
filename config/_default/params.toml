@@ -384,22 +384,22 @@
   [watermark]
     enable = false
     # watermark's text (HTML format is supported)
-    content = "高阶无穷郝"
+    content = "mkdirhao.tech"
     # watermark's transparency
     opacity = 0.1
     # watermark's width. unit: px
     width = 150
     # watermark's height. unit: px
-    height = 20
+    height = 50
     # row spacing of watermarks. unit: px
-    rowSpacing = 60
+    rowSpacing = 200
     # col spacing of watermarks. unit: px
-    colSpacing = 30
+    colSpacing = 200
     # watermark's tangent angle. unit: deg
-    rotate = 15
+    rotate = 20
     # watermark's fontSize. unit: rem
-    fontSize = 0.85
-    # FixIt 0.2.13 | NEW watermark's fontFamily
+    fontSize = 1
+    # FixIt 0.2.13 | N1watermark's fontFamily
     fontFamily = "inherit"
 
   # FixIt 0.2.12 | NEW Busuanzi count
@@ -501,7 +501,7 @@
     enable = true
     # All available colors:
     # ["black", "blue", "green", "orange", "pink", "purple", "red", "silver", "white", "yellow"]
-    color = "blue"
+    color = "green"
     # All available themes:
     # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
     # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
@@ -553,9 +553,9 @@
     # license info (HTML format is supported)
     license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
     # whether to show link to Raw Markdown content of the post
-    linkToMarkdown = true
+    linkToMarkdown = false
     # FixIt 0.3.0 | NEW whether to show link to view source code of the post
-    linkToSource = true
+    linkToSource = false
     # FixIt 0.3.0 | NEW whether to show link to edit the post
     linkToEdit = true
     # FixIt 0.3.0 | NEW whether to show link to report issue for the post
