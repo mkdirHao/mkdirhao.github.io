@@ -61,3 +61,9 @@ Host xxxx # host alias
     IdentityFile ~/.ssh/id_ed25519 
 
 ```
+
+## 好用的ssh全平台客户端推荐
+
+[GitHub - kingToolbox/WindTerm: A professional cross-platform SSH/Sftp/Shell/Telnet/Serial terminal.](https://github.com/kingToolbox/WindTerm)
+
+[FinalShell官网](https://www.hostbuf.com/)
