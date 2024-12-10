@@ -107,3 +107,4 @@ Host xxxx # host alias
 git log
 git checkout xxxxx
 pamac build
+```
