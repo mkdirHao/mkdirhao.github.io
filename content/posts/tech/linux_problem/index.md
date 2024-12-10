@@ -67,3 +67,43 @@ Host xxxx # host alias
 [GitHub - kingToolbox/WindTerm: A professional cross-platform SSH/Sftp/Shell/Telnet/Serial terminal.](https://github.com/kingToolbox/WindTerm)
 
 [FinalShell官网](https://www.hostbuf.com/)
+
+
+## 如何使用yay 从本地pkgbuild文件安装
+
+要使用本地的 `PKGBUILD` 文件来通过 `yay` 安装软件包，你可以按照以下步骤操作：
+
+1. **获取 `PKGBUILD` 文件**：首先，你需要有一个 `PKGBUILD` 文件，这通常是从 AUR 或其他来源获得的。如果你已经有了这个文件，确保它位于你的本地文件系统中。
+
+2. **安装 `base-devel` 和 `git`**：在开始之前，确保你的系统中安装了 `base-devel` 和 `git` 包，因为这些是构建软件包所必需的。你可以使用以下命令来安装它们：
+   ```
+   pacman -S --needed base-devel git
+   ```
+
+3. **克隆或下载 `yay`**：如果你还没有安装 `yay`，你可以从 AUR 克隆它的仓库并安装。使用以下命令：
+   ```
+   git clone https://aur.archlinux.org/yay.git
+   cd yay
+   makepkg -si
+   ```
+   这将构建并安装 `yay`。安装完成后，你可以通过运行 `yay --version` 来验证 `yay` 是否已成功安装。
+
+4. **使用 `yay` 安装本地 `PKGBUILD`**：一旦你有了 `PKGBUILD` 文件和 `yay`，你可以使用 `yay` 来安装本地的 `PKGBUILD`。假设你的 `PKGBUILD` 文件位于某个目录，你可以使用以下命令：
+   ```
+   yay -Bi <目录>
+   ```
+   这里的 `<目录>` 是包含你的 `PKGBUILD` 文件的目录的路径。`-Bi` 选项告诉 `yay` 安装依赖并构建本地 `PKGBUILD`。
+
+5. **确认安装**：构建完成后，`yay` 将提示你确认安装。按照屏幕上的指示操作，通常需要按 `Y` 来确认。
+
+6. **验证安装**：安装完成后，你可以使用 `yay` 来验证软件包是否已成功安装，或者使用 `pacman` 来查询已安装的软件包列表。
+
+以上步骤提供了一个基本的指南，如何使用本地 `PKGBUILD` 文件通过 `yay` 安装软件包。请确保你遵循所有安全实践，因为从 AUR 或其他非官方源构建软件包可能会带来安全风险。
+
+## manjaro如何安装aur第三方的历史版本
+首先，找到目标软件的aur页面，然后把仓库clone下来
+然后使用
+```bash
+git log
+git checkout xxxxx
+pamac build
