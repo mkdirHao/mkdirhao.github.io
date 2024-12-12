@@ -221,3 +221,50 @@ oh-my-posh init pwsh --config ~/1_shell.omp.json  | Invoke-Expression
 }
 
 ```
+
+
+## 我的tmux配置
+
+```bash
+# set prefix
+unbind C-b
+set -g prefix C-n
+bind C-n send-prefix
+
+set -g visual-activity off
+set -gq allow-passthrough on
+
+# set mouse
+setw -g mouse
+
+# Vim style pane selection
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# Start windows and panes at 1, not 0
+set -g base-index 1
+set -g pane-base-index 1
+set-window-option -g pane-base-index 1
+set-option -g renumber-windows on
+
+# Shift arrow to switch windows
+bind -n S-Left  previous-window
+bind -n S-Right next-window
+# split windos
+bind [ split-window -v -c  "#{pane_current_path}"
+bind ] split-window -h -c  "#{pane_current_path}"
+# plugins install
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'dracula/tmux'
+
+#theme
+set -g @dracula-plugins "cpu-usage ram-usage  battery"
+
+
+run '~/.tmux/plugins/tpm/tpm'
+
+```
