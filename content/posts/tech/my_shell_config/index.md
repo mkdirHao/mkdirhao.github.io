@@ -225,6 +225,13 @@ oh-my-posh init pwsh --config ~/1_shell.omp.json  | Invoke-Expression
 
 ## 我的tmux配置
 
+要先配置好[tpm](https://github.com/tmux-plugins/tpm)
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+```
+
 ```bash
 # set prefix
 unbind C-b
