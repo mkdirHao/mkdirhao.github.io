@@ -108,3 +108,21 @@ git log
 git checkout xxxxx
 pamac build
 ```
+## 如何在安卓手机上写代码
+
+首先，安装[Termux](https://termux.dev/en/)
+
+然后启动termux，
+安装必要的工具（golang java）
+```bash
+pkg install git 
+pkg install neovim 
+pkg install golang 
+pkg install openjdk-21
+```
+然后根据自己需要去配置nvim，懒人可以用[🚀LazyVim](https://www.lazyvim.org/)
+```bash
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+
+```
+然后启动nvim自动加载所需要的插件，然后就可以愉快地在手机上写代码了。
