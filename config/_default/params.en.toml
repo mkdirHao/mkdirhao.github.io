@@ -68,7 +68,7 @@
         paypal = "/images/paypal.png"
         # bitcoin = "/images/bitcoin.png"
   [author]
-    name = "hao"
+    name = "Hao"
     email = "mkdirhao@gmail.com"
     link = ""
     avatar = "/icon.svg"
