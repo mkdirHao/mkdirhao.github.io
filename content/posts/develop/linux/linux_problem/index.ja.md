@@ -125,3 +125,27 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim
 
 ```
 次にnvimを起動して必要なプラグインを自動的に読み込み、携帯でコードを楽しく書くことができます。
+
+
+## どのようにして brew unlinkしてから再びlinkさせるか
+
+### brew パッケージのunlink
+まず、以下のコマンドを実行してimagemagickをunlinkします。
+```bash
+$ brew unlink imagemagick
+/usr/local/Cellar/imagemagick/6.9.2-7...から72個のシンボリックリンクが削除されました
+```
+### brew パッケージのrelink
+以下のコマンドを実行して、dryrunモードでimagemagickをlinkします。これにより、何がlinkされるかが一覧表示されます。
+```bash
+$ brew link imagemagick --dry-run
+実際のlinkを実行するには、以下のコマンドを実行します
+$ brew link imagemagick
+/usr/local/Cellar/imagemagick/6.9.2-7...に71個のシンボリックリンクが作成されました
+```
+linkが作成されたかどうかを確認するには（例：convertコマンドの場合）、以下のコマンドを実行します。
+
+```bash
+$ ls -l $(brew --prefix)/bin/convert
+```
+brew --prefixはインストールのためのbrewのプレフィックスを一覧表示します。

@@ -126,3 +126,27 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim
 
 ```
 Then launch nvim to automatically load the required plugins, and you can happily code on your phone.
+
+
+## how to brew unlink then relink
+
+### brew – unlinking a package
+First run the following to unlink imagamagick.
+```bash
+$ brew unlink imagemagick
+Unlinking /usr/local/Cellar/imagemagick/6.9.2-7... 72 symlinks removed
+```
+### brew – linking a package
+Run the following to link imagamagick in dryrun mode. This will also list down what all will get linked.
+```bash
+$ brew link imagemagick --dry-run
+To do actual linking run the following
+$ brew link imagemagick
+Linking /usr/local/Cellar/imagemagick/6.9.2-7... 71 symlinks created
+```
+To see if link has been for created for one command (e.g. convert), run the following
+
+```bash
+$ ls -l $(brew --prefix)/bin/convert
+```
+Note that brew --prefix will list the brew prefix for installation.
