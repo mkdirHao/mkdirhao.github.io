@@ -149,3 +149,28 @@ linkが作成されたかどうかを確認するには（例：convertコマン
 $ ls -l $(brew --prefix)/bin/convert
 ```
 brew --prefixはインストールのためのbrewのプレフィックスを一覧表示します。
+
+
+
+## ターミナルで天気情報を取得する方法
+
+ワンコマンドで完了
+
+```bash
+curl wttr.in
+```
+
+位置を指定したい場合は、位置情報を追加してください。
+
+```bash
+curl wttr.in/ueno
+Weather report: ueno
+
+      \   /     Sunny
+       .-.      +9(5) °C
+    ― (   ) ―   ↘ 37 km/h
+       `-’      10 km
+      /   \     0.0 mm
+```
+
+>> [!Tip] 他の具体パラメーターはGitHub[chubin/wttr.in](https://github.com/chubin/wttr.in)を参照してください。

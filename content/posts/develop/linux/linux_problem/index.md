@@ -149,3 +149,28 @@ To see if link has been for created for one command (e.g. convert), run the foll
 $ ls -l $(brew --prefix)/bin/convert
 ```
 Note that brew --prefix will list the brew prefix for installation.
+
+
+## 如何在终端中获取天气信息
+
+一条命令搞定
+
+```bash
+curl wttr.in
+```
+
+
+如果想指定位置,可以在后面加上位置信息.
+
+```bash
+curl wttr.in/ueno
+Weather report: ueno
+
+      \   /     Sunny
+       .-.      +9(5) °C
+    ― (   ) ―   ↘ 37 km/h
+       `-’      10 km
+      /   \     0.0 mm
+```
+
+>> [!Tip] 其他具体参数参考GitHub[chubin/wttr.in](https://github.com/chubin/wttr.in)
