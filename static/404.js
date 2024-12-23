@@ -5,5 +5,5 @@
  */
 
 "use strict"
-particlesJS.load('particles-js', '404.json', function() {
+particlesJS.load('particles-js', '/404.json', function() {
 });
