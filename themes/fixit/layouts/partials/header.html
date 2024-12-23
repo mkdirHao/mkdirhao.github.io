@@ -144,6 +144,9 @@
             </ul>
           </li>
         {{- end -}}
+
+        {{- /* Custom menu items in the desktop header */ -}}
+        {{- block "custom-menu:desktop" . }}{{ end -}}
       </ul>
     </nav>
   </div>
@@ -293,7 +296,7 @@
                       {{- .Language.LanguageName -}}
                     </option>
                   {{- end -}}
-                {{- else if gt (len .AllTranslations) 1 -}}
+                {{- else if .IsTranslated -}}
                   {{- range .AllTranslations -}}
                     <option value="{{ .RelPermalink }}"{{ if eq .Lang $.Lang }} selected disabled{{ end }}>
                       {{- .Language.LanguageName -}}
@@ -305,6 +308,9 @@
               </select>
             </span>
           {{- end -}}
+
+          {{- /* Custom menu items in the mobile header */ -}}
+          {{- block "custom-menu:mobile" . }}{{ end -}}
         </li>
       </ul>
     </nav>

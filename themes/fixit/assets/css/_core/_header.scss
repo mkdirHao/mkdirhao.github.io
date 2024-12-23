@@ -118,7 +118,7 @@ header {
   }
 }
 
-.search {
+.menu .search {
   position: relative;
 
   input {
@@ -279,6 +279,8 @@ header {
         border-radius: $global-border-radius;
         border: 1px solid $menu-border-color;
         background-color: $header-background-color;
+        max-height: 60vh;
+        overflow-y: auto;
         @include transition(box-shadow 0.3s ease);
         @include box-shadow(0 0 1.5rem 0 rgba(0, 0, 0, 0.1));
 
@@ -384,6 +386,8 @@ header {
       @include scrollbar-width(none, 0);
 
       [data-theme='dark'] & {
+        background: $header-background-color-dark;
+        border-top-color: $global-border-color-dark;
         @include box-shadow(0 0.125rem 0.25rem rgba(255, 255, 255, 0.1));
       }
 
@@ -511,11 +515,6 @@ header {
 
       &.active {
         display: block;
-      }
-
-      [data-theme='dark'] & {
-        background: $header-background-color-dark;
-        border-top-color: $global-border-color-dark;
       }
     }
   }
