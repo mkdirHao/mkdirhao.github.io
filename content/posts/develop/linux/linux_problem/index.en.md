@@ -174,3 +174,78 @@ Weather report: ueno
 ```
 
 >> [!Tip] For other specific parameters, refer to GitHub[chubin/wttr.in](https://github.com/chubin/wttr.in)
+
+## How to Configure a Hugo Blog to Automatically Select the Language Based on Browser Settings
+
+1. Set `defaultContentLanguageInSubdir = true` in your configuration.
+2. Create a file named `alias.html` in the `/layouts/` directory.
+3. Paste the following code into `alias.html`:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Permalink }}</title>
+    <link rel="canonical" href="{{ .Permalink }}"/>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8"/>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url={{ .Permalink }}"/>
+    </noscript>
+    <script>
+      ;(function () {
+        // Only do i18n at root, 
+        // otherwise, redirect immediately
+        if (window.location.pathname !== '/') {
+          window.location.replace('{{ .Permalink }}')
+          return
+        }
+
+        var getFirstBrowserLanguage = function () {
+          var nav = window.navigator,
+          browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'],
+          i,
+          language
+
+          if (Array.isArray(nav.languages)) {
+            for (i = 0; i < nav.languages.length; i++) {
+              language = nav.languages[i]
+              if (language && language.length) {
+                return language
+              }
+            }
+          }
+
+          // support for other well known properties in browsers
+          for (i = 0; i < browserLanguagePropertyKeys.length; i++) {
+            language = nav[browserLanguagePropertyKeys[i]]
+            if (language && language.length) {
+              return language
+            }
+          }
+          return 'en'
+        }
+
+        var preferLang = getFirstBrowserLanguage()
+        if (preferLang == 'ja' ){
+          // visitor prefers Chinese
+          window.location.replace('/ja/')
+        }
+        else if (preferLang.indexOf('zh') !== -1) {
+          // visitor prefers Chinese
+          window.location.replace('/zh-cn/')
+        } else {
+          // fallback to English
+          window.location.replace('/en/')
+        }
+      })()
+    </script>
+</head>
+<body>
+<h1>Rerouting</h1>
+<p>You should be rerouted in a jiff, if not, <a href="{{ .Permalink }}">click here</a>.</p>
+</body>
+</html>
+
+```
+

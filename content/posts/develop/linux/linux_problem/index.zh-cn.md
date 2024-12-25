@@ -174,3 +174,82 @@ Weather report: ueno
 ```
 
 >> [!Tip] 其他具体参数参考GitHub[chubin/wttr.in](https://github.com/chubin/wttr.in)
+
+
+## 如何让 Hugo 博客根据浏览器的语言设置自动选择相应的语言。
+
+首先设置 `defaultContentLanguageInSubdir = true`。
+
+然后在 /layouts/ 下添加一个名为 alias.html 的文件。
+
+然后将下面的代码复制到 alias.html 中。
+
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Permalink }}</title>
+    <link rel="canonical" href="{{ .Permalink }}"/>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8"/>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url={{ .Permalink }}"/>
+    </noscript>
+    <script>
+      ;(function () {
+        // Only do i18n at root, 
+        // otherwise, redirect immediately
+        if (window.location.pathname !== '/') {
+          window.location.replace('{{ .Permalink }}')
+          return
+        }
+
+        var getFirstBrowserLanguage = function () {
+          var nav = window.navigator,
+          browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'],
+          i,
+          language
+
+          if (Array.isArray(nav.languages)) {
+            for (i = 0; i < nav.languages.length; i++) {
+              language = nav.languages[i]
+              if (language && language.length) {
+                return language
+              }
+            }
+          }
+
+          // support for other well known properties in browsers
+          for (i = 0; i < browserLanguagePropertyKeys.length; i++) {
+            language = nav[browserLanguagePropertyKeys[i]]
+            if (language && language.length) {
+              return language
+            }
+          }
+          return 'en'
+        }
+
+        var preferLang = getFirstBrowserLanguage()
+        if (preferLang == 'ja' ){
+          // visitor prefers Chinese
+          window.location.replace('/ja/')
+        }
+        else if (preferLang.indexOf('zh') !== -1) {
+          // visitor prefers Chinese
+          window.location.replace('/zh-cn/')
+        } else {
+          // fallback to English
+          window.location.replace('/en/')
+        }
+      })()
+    </script>
+</head>
+<body>
+<h1>Rerouting</h1>
+<p>You should be rerouted in a jiff, if not, <a href="{{ .Permalink }}">click here</a>.</p>
+</body>
+</html>
+
+```
+
