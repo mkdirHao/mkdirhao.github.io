@@ -2,9 +2,9 @@
   # FixIt 0.2.15 | CHANGED FixIt theme version
   version = "0.3.X" # e.g. "0.2.X", "0.2.15", "v0.2.15" etc.
   # site description
-  description = "mkdirHao'blog-高阶无穷郝的博客"
+  description = "mkdirHao'blog-高阶无穷郝的博客,a blog about web development, programming, and life in tokyo | 一个关于web开发、编程和东京生活的博客"
   # site keywords
-  keywords = ["mkdirHao","高阶无穷郝","博客","blog"]
+  keywords = ["mkdirHao","高阶无穷郝","博客","blog","web development","web开发","programming","编程","life in tokyo","东京生活"]
   # site default theme ["light", "dark", "auto"]
   defaultTheme = "auto"
   # which hash function used for SRI, when empty, no SRI is used
@@ -420,6 +420,7 @@
 
   # Site SEO config
   [seo]
+    enable = true
     # image URL
     image = ""
     # thumbnail URL
@@ -427,12 +428,12 @@
 
   # Analytics config
   [analytics]
-    enable = false
+    enable = true
     # Google Analytics
     [analytics.google]
-      id = ""
+      id = "G-9QFM368QTX"
       # whether to anonymize IP
-      anonymizeIP = true
+      anonymizeIP = false
     # Fathom Analytics
     [analytics.fathom]
       id = ""
@@ -865,11 +866,12 @@
         # someJavascript = "https://cdn.example.com/some.js"
     # Page SEO config
     [page.seo]
+      enable = true
       # image URL
       images = []
       # Publisher info
       [page.seo.publisher]
-        name = "mkdirHao"
+        name = "mkdirHao | 高阶无穷郝"
         logoUrl = ""
 
   [admonition]

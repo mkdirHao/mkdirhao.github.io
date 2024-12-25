@@ -6,6 +6,10 @@
 # website title
 # 网站标题
 title = "mkdirHao'blog"
+ # site description
+  description = "mkdirHao'blog-高阶无穷郝的博客,a blog about web development, programming, and life in tokyo | 一个关于web开发、编程和东京生活的博客"
+  # site keywords
+  keywords = ["mkdirHao","高阶无穷郝","博客","blog","web development","web开发","programming","编程","life in tokyo","东京生活"]
 
 # Hostname (and path) to the root
 # 根目录的主机名（和路径）
@@ -38,7 +42,7 @@ hasCJKLanguage = true
 # paginate = 12
 # copyright description used only for seo schema
 # 版权描述，仅仅用于 SEO
-copyright = "mkdirHao"
+copyright = "mkdirHao | 高阶无穷郝"
 
 # whether to use robots.txt
 # 是否使用 robots.txt
