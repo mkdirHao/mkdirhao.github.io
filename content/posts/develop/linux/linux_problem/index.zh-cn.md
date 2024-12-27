@@ -253,3 +253,19 @@ Weather report: ueno
 
 ```
 
+
+
+## ssh 连接总是断开怎么办?
+
+修改一下sshd的配置 
+
+```bash
+sudo nvim /etc/ssh/sshd_config 
+# set TCPKeepAlive yes 
+TCPKeepAlive yes 
+```
+然后重启sshd
+
+```bash
+ sudo systemctl restart sshd 
+```

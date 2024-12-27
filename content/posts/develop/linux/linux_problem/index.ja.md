@@ -252,3 +252,17 @@ Weather report: ueno
 
 ```
 
+## SSH 接続が常に切断される場合はどうすればいいですか？
+
+sshd の設定を変更してください。
+
+```bash
+sudo nvim /etc/ssh/sshd_config 
+# set TCPKeepAlive yes 
+TCPKeepAlive yes 
+```
+次に、sshd を再起動します。
+
+```bash
+sudo systemctl restart sshd 
+```

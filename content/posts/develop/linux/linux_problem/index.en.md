@@ -249,3 +249,17 @@ Weather report: ueno
 
 ```
 
+## What to do if SSH connections keep disconnecting?
+
+Modify the sshd configuration:
+
+```bash
+sudo nvim /etc/ssh/sshd_config 
+# set TCPKeepAlive yes 
+TCPKeepAlive yes 
+```
+Then restart sshd:
+
+```bash
+sudo systemctl restart sshd
+```
