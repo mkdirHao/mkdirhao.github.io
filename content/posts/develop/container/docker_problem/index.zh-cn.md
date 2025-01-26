@@ -59,3 +59,10 @@ sudo groupadd docker
 sudo systemctl restart docker 
 sudo systemctl daemon-reload
 ```
+
+## docker 重启所有容器
+
+```bash
+docker restart $(docker ps -a -q)
+
+```

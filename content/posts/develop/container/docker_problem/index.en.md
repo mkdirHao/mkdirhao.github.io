@@ -62,3 +62,10 @@ sudo groupadd docker
 sudo systemctl restart docker 
 sudo systemctl daemon-reload
 ```
+
+## Restart all Docker containers
+
+```bash
+docker restart $(docker ps -a -q)
+
+```

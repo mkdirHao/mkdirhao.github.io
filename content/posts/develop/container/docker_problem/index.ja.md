@@ -59,3 +59,10 @@ sudo groupadd docker
 sudo systemctl restart docker 
 sudo systemctl daemon-reload
 ```
+
+## dockerですべてのコンテナを再起動する
+
+```bash
+docker restart $(docker ps -a -q)
+
+```
