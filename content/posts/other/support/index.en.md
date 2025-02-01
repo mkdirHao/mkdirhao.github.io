@@ -12,10 +12,10 @@ draft: false
 
 click update you can see the info
 
-![](image/1738415002568.png)
+![](1738415002568.png)
 
 ## click the map
 
 you can see the info on the map
 
-![](image/1738415017572.png)
+![](1738415017572.png)
