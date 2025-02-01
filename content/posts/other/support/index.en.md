@@ -19,3 +19,8 @@ click update you can see the info
 you can see the info on the map
 
 ![](1738415017572.png)
+
+
+## get support 
+
+mail: iamhaokaki@gmail.com
