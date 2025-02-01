@@ -1,6 +1,7 @@
 ---
 title: "support"
 date: 2025-02-01T10:20:45+08:00
+slug: support
 draft: false
 ---
 
